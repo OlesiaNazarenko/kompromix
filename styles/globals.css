@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:wght@100;200;400;600;900&family=Poppins:wght@300;600&family=Raleway:wght@100;200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Poppins:wght@300;600&display=swap");
 
 :root {
   --lightBlueColor: #8fc1e3;
@@ -11,7 +11,7 @@
   --blueColor: #5085a5;
   --greenColor: #687864;
   --textColor: #222831;
-  --mainFont: "Raleway", sans-serif;
+  --mainFont: "Montserrat", sans-serif;
 }
 
 html,
@@ -44,4 +44,35 @@ ul {
   width: 1000px;
   margin: 0 auto;
   position: relative;
+}
+.buttonGetTheCall {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    var(--perfectLightBlue),
+    var(--blueColor)
+  );
+  margin-bottom: 10px;
+  border: 0 solid #e5e7eb;
+  border-radius: 0.5rem;
+  color: var(--backgroundColor);
+  font-family: var(--mainFont);
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 24px;
+  outline: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  text-transform: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1),
+    0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+.buttonGetTheCall:hover {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
 }
