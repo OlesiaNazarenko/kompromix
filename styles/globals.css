@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:wght@100;200;400;600;900&family=Poppins:wght@300;600&family=Raleway:wght@100;200;400;600&display=swap");
+
+:root {
+  --lightBlueColor: #8fc1e3;
+  --lightBlueColor2: #b4dfe5;
+  --darkBlueColor: #31708e;
+  --darkBlueColor2: #303c6c;
+  --brightBlueColor: #3b8beb;
+  --perfectLightBlue: #86b3d1;
+  --backgroundColor: #f7f9fb;
+  --blueColor: #5085a5;
+  --greenColor: #687864;
+  --textColor: #222831;
+  --mainFont: "Raleway", sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* background-color: var(--backgroundColor); */
+  color: var(--textColor);
+  font-family: var(--mainFont);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
