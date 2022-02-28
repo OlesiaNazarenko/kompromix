@@ -1,0 +1,53 @@
+.footer {
+  position: relative;
+  padding: 0 0 40px 0;
+  background-color: var(--blueColor);
+  margin-top: 40px;
+  font-weight: 200;
+}
+.footerWrap {
+  display: flex;
+}
+.logoDesc {
+  width: 50%;
+  padding: 5px;
+  padding-left: 10px;
+  border-left: 1px solid var(--perfectLightBlue);
+  color: var(--backgroundColor);
+}
+.linkBox {
+  width: 30%;
+  margin-top: 52px;
+  padding-left: 50px;
+}
+.linkBox__link {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: var(--backgroundColor);
+}
+.linkBox__link:hover {
+  color: var(--textColor);
+}
+.linkBox__icon {
+  position: relative;
+  top: 3px;
+  right: 5px;
+  font-size: 18px;
+}
+.footer__nav_list {
+  position: relative;
+  width: 20%;
+  margin-top: 60px;
+  color: var(--backgroundColor);
+}
+.nav_list__item {
+  margin: 5px 0;
+}
+.nav_list__link:hover {
+  color: var(--textColor);
+}
+.contactsSection_logo {
+  width: 30%;
+  margin-right: 30px;
+}

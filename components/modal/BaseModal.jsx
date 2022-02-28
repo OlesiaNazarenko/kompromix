@@ -2,10 +2,9 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import s from "./BaseModal.module.css";
-
+import { createTheme } from "@mui/material/styles";
 const style = {
   position: "absolute",
   top: "50%",
@@ -15,7 +14,18 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
+  textAlign: "center",
 };
+const theme = createTheme({
+  palette: {
+    primary: {
+      // light: will be calculated from palette.primary.main,
+      main: "#5085a5",
+      // dark: will be calculated from palette.primary.main,
+      // contrastText: will be calculated to contrast with palette.primary.main
+    },
+  },
+});
 export default function BaseModal({ buttonName }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -27,6 +37,7 @@ export default function BaseModal({ buttonName }) {
         {buttonName}
       </Button>
       <Modal
+        theme={theme}
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -35,6 +46,7 @@ export default function BaseModal({ buttonName }) {
         <Box sx={style} component="form">
           <p class="modal__title">Залиште свої дані і ми Вам зателефонуємо:</p>
           <TextField
+            className={s.textfield}
             required
             id="standard-basic"
             autoComplete="off"
@@ -42,6 +54,7 @@ export default function BaseModal({ buttonName }) {
             variant="standard"
           />
           <TextField
+            className={s.textfield}
             required
             id="standard-basic"
             autoComplete="off"
@@ -49,6 +62,8 @@ export default function BaseModal({ buttonName }) {
             variant="standard"
           />
           <TextField
+            className={s.textfield}
+            color="primary"
             id="standard-basic"
             label="Електронна адреса"
             variant="standard"
