@@ -4,6 +4,7 @@ import Logo from "../../public/logo.jpg";
 import Link from "next/link";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
+import BaseModal from "../modal/BaseModal";
 export default function HeaderContacts() {
   return (
     <div class={s.header__contactsSection}>
@@ -24,11 +25,7 @@ export default function HeaderContacts() {
         </span>
       </div>
       <div class={s.contactsSection_getTheCall}>
-        <input
-          type="button"
-          class={s.buttonGetTheCall}
-          value="Зворотній дзвінок"
-        />
+        <BaseModal buttonName="Зворотній дзвінок" />
         <span>Щодня з 8:00 до 20:00</span>
       </div>
       <div class={s.contactsSection_contacts}>
@@ -38,7 +35,7 @@ export default function HeaderContacts() {
         </p>
         <p class={s.contactsSection_contacts__link}>
           <EmailIcon className={s.emailIcon} />
-          <a href="mailto: zakaz@gmail.com">zakaz@gmail.com</a>
+          <a href="mailto: zakaz@gmail.com">kompromix.zp@gmail.com</a>
         </p>
       </div>
     </div>

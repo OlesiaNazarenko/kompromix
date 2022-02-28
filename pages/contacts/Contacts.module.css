@@ -1,0 +1,48 @@
+.contactsIcon {
+  font-size: 90px;
+  color: var(--blueColor);
+}
+.titleBox {
+  display: flex;
+  margin-top: 30px;
+}
+.titleBox__textBox {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.contactsWrap {
+  margin-top: 30px;
+  display: flex;
+  width: 580px;
+  justify-content: space-between;
+  color: var(--textColor);
+}
+.contactWrap__link {
+  margin-bottom: 15px;
+  display: block;
+}
+.contactWrap__link:hover {
+  color: var(--blueColor);
+}
+.contactsWrap__box {
+  padding: 10px 30px;
+  border: 1px solid var(--blueColor);
+  border-radius: 0.5rem;
+}
+.CallIcon,
+.EmailIcon {
+  position: relative;
+  top: 5px;
+  right: 3px;
+}
+.InstLink {
+  color: var(--blueColor);
+}
+.InstLink:hover {
+  color: var(--perfectLightBlue);
+}
+.InstIcon {
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+}

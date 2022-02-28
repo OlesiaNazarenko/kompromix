@@ -1,0 +1,38 @@
+.buttonGetTheCall1 {
+  font-size: 10px;
+}
+
+.button {
+  position: relative;
+  display: block;
+  background-color: var(--brightBlueColor);
+  background-image: linear-gradient(
+    to bottom,
+    var(--perfectLightBlue),
+    var(--blueColor)
+  );
+  margin: 0 auto;
+  border: 0 solid #e5e7eb;
+  border-radius: 0.5rem;
+  color: var(--backgroundColor);
+  font-family: var(--mainFont);
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 24px;
+  outline: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  text-transform: none;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1),
+    0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+.textfield {
+  margin-bottom: 20px;
+  width: 80%;
+  font-family: var(--mainFont);
+  border-color: var(--brightBlueColor);
+}

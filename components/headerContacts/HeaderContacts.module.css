@@ -30,44 +30,11 @@
   flex-direction: column;
 }
 
-.buttonGetTheCall {
-  background-color: transparent;
-  background-image: linear-gradient(
-    to bottom,
-    var(--perfectLightBlue),
-    var(--blueColor)
-  );
-  margin-bottom: 10px;
-  border: 0 solid #e5e7eb;
-  border-radius: 0.5rem;
-  color: var(--backgroundColor);
-  font-family: var(--mainFont);
-  cursor: pointer;
-  font-size: 100%;
-  font-weight: 700;
-  line-height: 24px;
-  outline: 2px solid transparent;
-  padding: 0.5rem 1.5rem;
-  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1),
-    0px 2px 2px rgba(81, 41, 10, 0.2);
-}
-
-.buttonGetTheCall:hover {
-  background-color: #f3f4f6;
-  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
-    0px 1px 1px rgba(81, 41, 10, 0.15);
-}
-
 .contactsSection_contacts {
-  width: 33%;
   position: relative;
-  text-align: right;
+  text-align: left;
   margin-top: 5px;
-  margin-left: -100px;
+  margin-left: 80px;
 }
 .callIcon,
 .emailIcon {
@@ -79,6 +46,3 @@
 .contactsSection_contacts__link:hover {
   color: var(--perfectLightBlue);
 }
-/* .contactsSection_contacts__link:hover .callIcon {
-  color: var(--perfectLightBlue);
-} */
