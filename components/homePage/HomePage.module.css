@@ -31,3 +31,96 @@
 .qualitiesWrap__icon {
   font-size: 40px;
 }
+.services {
+  position: relative;
+  margin-top: 60px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+}
+.services__roofingElements {
+  grid-template-areas:
+    "main-title main-img"
+    "main-text main-img"
+    "box1 main-img"
+    "box2 main-img"
+    "box3 main-img"
+    "box4 box5"
+    "box7 box6";
+  position: relative;
+  grid-template-columns: auto-fit;
+  display: grid;
+  row-gap: 10px;
+  column-gap: 20px;
+  font-size: 14px;
+  margin: 40px auto;
+}
+.services__roofingElements > h3 {
+  grid-area: main-title;
+  text-align: left;
+}
+.services__roofingElements > p {
+  grid-area: main-text;
+  margin: 10px 0 10px 0;
+
+  text-align: left;
+}
+.RoofingElementsImg {
+  grid-area: main-img;
+}
+
+.services__box {
+  display: inline-grid;
+  column-gap: 20px;
+  align-content: space-evenly;
+  font-size: 12px;
+  grid-template-columns: 110px 350px;
+  padding: 10px;
+  border-radius: 0.5em;
+  border: 1px solid var(--textColor);
+}
+.services__box:hover,
+.services__box:active {
+  border-color: var(--perfectLightBlue);
+}
+.boxImg {
+  grid-column: 2/2;
+  grid-row: 2/2;
+  padding-left: 10px;
+}
+.boxDesc {
+  grid-column: 2 / 2;
+  grid-row: 1;
+  margin-top: 20px;
+  text-align: left;
+}
+.boxTitle {
+  grid-column: 2 / 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+.box7 {
+  grid-area: box7;
+}

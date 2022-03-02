@@ -3,7 +3,6 @@ import HeroImg from "../../public/hero.jpg";
 import s from "./HeroSection.module.css";
 import "./HeroSection.module.css";
 import BaseModal from "../modal/BaseModal";
-import { red } from "@mui/material/colors";
 export default function HeroSection() {
   return (
     <section className="container">
