@@ -14,7 +14,9 @@ import BoxImage4 from "../../public/details/4.png";
 import BoxImage5 from "../../public/details/5.jpg";
 import BoxImage6 from "../../public/details/6.png";
 import BoxImage7 from "../../public/details/7.png";
+import KeyRoof from "../../public/keyRoof.jpg";
 import "react-alice-carousel/lib/alice-carousel.css";
+import BaseModal from "../modal/BaseModal";
 export default function HomePage() {
   return (
     <>
@@ -58,6 +60,12 @@ export default function HomePage() {
       <section className={classNames(s.services)}>
         <div className="container">
           <h2>Що ми можемо зробити для Вас?</h2>
+          <p>
+            {" "}
+            Ми пропонуємо нашим клієнтам повну комплектацію покрівлі.
+            Покрівельні комплектуючі нададуть Вашому даху закінченого вигляду, а
+            також стануть додатковим захистом від проникнення вологи всередину.
+          </p>
           <div className={s.services__roofingElements}>
             <div className={s.RoofingElementsImg}>
               <Image
@@ -73,8 +81,6 @@ export default function HomePage() {
               Ряд комплектуючих і добірних елементів, обов'язково необхідний для
               монтажу покрівельних систем.{" "}
             </p>
-
-            {/* <div className={s.services__boxes}> */}
             <div className={classNames(s.services__box, s.box1)}>
               <Image
                 src={BoxImage1}
@@ -178,8 +184,51 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          {/* </div> */}
+          <p>
+            За Вашим спеціальним замовлення ми можемо швидко виготовити
+            покрівельні елементи індивідуального дизайну.
+          </p>
+          <div className={s.keyRoof}>
+            <h3>Покрівля під ключ</h3>
+            <div className={s.keyRoof__img}>
+              <Image src={KeyRoof} width={500} height={300} />
+            </div>
+            <p>
+              Покрівля під ключ дозволить Вам повністю довіритись нашому досвіду
+              і приділити час близьким, поки ми займаємось забезпеченням
+              надійного покриття даху. Ми створюємо елементи для даху за
+              індивідуальним дизайном і наші клієти впевнені у високому рівні
+              якості і отриманні очікуванного результату.
+            </p>
+            <ul>
+              <li>
+                <h4>Ми виконуємо:</h4>
+              </li>
+              <li>- металеві;</li>
+              <li>- натуральні;</li>
+              <li>- бітумні покрівлі.</li>
+            </ul>
+
+            <div class={s.buttonWrap}>
+              <BaseModal buttonName="Дізнатись подробиці і ціни" />
+            </div>
+          </div>
+          <h3>Нужен текст</h3>
+          <p>
+            Нужен текстНужен текстНужен текстНужен текстНужен текстНужен текст
+            Нужен текст Нужен текст Нужен текст Нужен текст Нужен текст Нужен
+            текст Нужен текст Нужен текст Нужен текст Нужен текст Нужен текст
+            Нужен текст Нужен текст Нужен текст Нужен текст Нужен текст Нужен
+            текст Нужен текст Нужен текст
+          </p>
           <Slider />
+          <p>
+            Нужен текстНужен текстНужен текстНужен текстНужен текстНужен текст
+            Нужен текст Нужен текст Нужен текст Нужен текст Нужен текст Нужен
+            текст Нужен текст Нужен текст Нужен текст Нужен текст Нужен текст
+            Нужен текст Нужен текст Нужен текст Нужен текст Нужен текст Нужен
+            текст Нужен текст Нужен текст
+          </p>
         </div>
       </section>
     </>

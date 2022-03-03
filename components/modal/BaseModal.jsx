@@ -58,6 +58,7 @@ export default function BaseModal({ buttonName }) {
             required
             id="standard-basic"
             autoComplete="off"
+            inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
             label="Телефон"
             variant="standard"
           />
