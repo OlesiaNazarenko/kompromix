@@ -21,8 +21,8 @@ export default function About() {
           фахівці, за плечима яких безліч готових проектів і задоволених
           клієнтів.
         </p>
+        <SliderAboutPage />
       </section>
-      <SliderAboutPage />
       <Footer />
     </>
   );
