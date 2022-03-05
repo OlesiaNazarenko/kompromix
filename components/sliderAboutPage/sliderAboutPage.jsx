@@ -1,6 +1,4 @@
 import s from "./SliderAboutPage.module.css";
-import Link from "next/link";
-import Router from "next/router";
 import Img1 from "../../public/sliderAboutPage/1.jpg";
 import Img2 from "../../public/sliderAboutPage/2.jpg";
 import Img3 from "../../public/sliderAboutPage/3.jpg";
@@ -23,7 +21,6 @@ export default class SliderAboutPage extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      // vertical: true,
     };
     return (
       <div className={s.sliderWrap}>

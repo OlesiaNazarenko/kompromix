@@ -13,6 +13,9 @@
   width: 140px;
   padding: 5px;
 }
+.header__nav_logo:hover {
+  cursor: pointer;
+}
 .logoDesc {
   width: 50%;
   padding: 5px;
