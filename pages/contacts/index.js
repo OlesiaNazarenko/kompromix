@@ -5,6 +5,7 @@ import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import classNames from "classnames";
 import s from "./Contacts.module.css";
 export default function Contacts() {
   return (
@@ -13,7 +14,7 @@ export default function Contacts() {
         <title>Kompromix.Контакты</title>
       </Head>
       <Header />
-      <section className="container">
+      <section className={classNames("container", "firstSection")}>
         <div className={s.titleBox}>
           <ConnectWithoutContactIcon className={s.contactsIcon} />
           <div className={s.titleBox__textBox}>

@@ -2,6 +2,7 @@
   font-size: 90px;
   color: var(--blueColor);
 }
+
 .titleBox {
   display: flex;
   margin-top: 30px;
@@ -12,8 +13,7 @@
 }
 .contactsWrap {
   margin-top: 30px;
-  display: flex;
-  width: 580px;
+  display: block;
   justify-content: space-between;
   color: var(--textColor);
 }
@@ -25,6 +25,7 @@
   color: var(--blueColor);
 }
 .contactsWrap__box {
+  margin-bottom: 20px;
   padding: 10px 30px;
   border: 1px solid var(--blueColor);
   border-radius: 0.5rem;
@@ -45,4 +46,26 @@
   font-size: 20px;
   position: relative;
   top: 5px;
+}
+@media screen and (max-width: 450px) {
+  .contactsWrap {
+    font-size: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .CallIcon,
+  .EmailIcon {
+    top: 3px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contactsWrap {
+    display: flex;
+    width: 580px;
+  }
+  .contactsWrap__box {
+    margin-bottom: 0;
+  }
 }

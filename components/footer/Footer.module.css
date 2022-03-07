@@ -6,7 +6,7 @@
   font-weight: 200;
 }
 .footerWrap {
-  display: flex;
+  display: block;
 }
 .logoDesc {
   width: 50%;
@@ -16,9 +16,10 @@
   color: var(--backgroundColor);
 }
 .linkBox {
-  width: 30%;
+  width: 100%;
   margin-top: 52px;
-  padding-left: 50px;
+
+  text-align: center;
 }
 .linkBox__link {
   display: block;
@@ -37,9 +38,13 @@
 }
 .footer__nav_list {
   position: relative;
-  width: 20%;
-  margin-top: 60px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
   color: var(--backgroundColor);
+}
+.footer__nav_list:nth-of-type(2) {
+  display: none;
 }
 .nav_list__item {
   margin: 5px 0;
@@ -48,6 +53,50 @@
   color: var(--textColor);
 }
 .contactsSection_logo {
-  width: 30%;
-  margin-right: 30px;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footerWrap {
+    display: flex;
+    font-size: 10px;
+  }
+  .footer__nav_list {
+    width: 20%;
+    margin-top: 50px;
+    text-align: left;
+  }
+  .footer__nav_list:nth-of-type(2) {
+    display: block;
+  }
+  .contactsSection_logo {
+    width: 30%;
+    justify-content: space-around;
+    margin-right: 30px;
+  }
+  .linkBox {
+    width: 30%;
+    margin-top: 44px;
+    padding-left: 24px;
+    text-align: left;
+  }
+  .linkBox__icon {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footerWrap {
+    font-size: 16px;
+  }
+  .footer__nav_list {
+    margin-top: 60px;
+  }
+  .linkBox {
+    padding-left: 50px;
+    margin-top: 48px;
+  }
+  .linkBox__icon {
+    font-size: 22px;
+  }
 }

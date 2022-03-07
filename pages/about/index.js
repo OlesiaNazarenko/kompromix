@@ -8,6 +8,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Img1 from "../../public/AboutPage/1.jpg";
 import Img2 from "../../public/AboutPage/2.jpg";
 import Img3 from "../../public/AboutPage/3.jpg";
+import ArtTrackIcon from "@mui/icons-material/ArtTrack";
 import SliderAboutPage from "../../components/sliderAboutPage/sliderAboutPage";
 import s from "./About.module.css";
 import BaseModal from "../../components/modal/BaseModal";
@@ -19,8 +20,13 @@ export default function About() {
         <title>Kompromix. Про компанію</title>
       </Head>
       <Header />
-      <section className={classNames("container", s.aboutSection)}>
-        <h1>Про нас</h1>
+      <section
+        className={classNames("container", s.aboutSection, "firstSection")}
+      >
+        <h1>
+          <ArtTrackIcon className={s.aboutPageIcon} />
+          Про нас
+        </h1>
         <p>
           Будівельна компанія "Kompromix" - це команда професіоналів, які
           відповідально ставляться до виконання своїх обов'язків та дбають про
@@ -81,11 +87,11 @@ export default function About() {
           <SliderAboutPage />
           <div>
             <p className={s.sliderText}>
-              TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-              TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-              TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-              TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-              TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+              TextTextText TextTextTextTextText TextTextTextText TextTextText
+              TextTextTextText TextTextTextText TextTextTextTextText TextText
+              TextTextTextTextText TextTextTextTextText TextTextTextTextText
+              TextTextTextText TextTextTextTextText TextTextTextText TextText
+              TextTextText TextTextTextText TextTextTextTextText TextTextText
             </p>
             <p className={s.sliderText}>
               Дивіться наші роботи у розділі{" "}
@@ -98,8 +104,9 @@ export default function About() {
                 className={s.sliderLink}
                 target="_blank"
               >
-                <InstagramIcon className={s.InstIcon} />
+                {" "}
                 нашому акаунті в мережі Instagram
+                <InstagramIcon className={s.InstIcon} />
               </a>
               .
             </p>

@@ -1,17 +1,22 @@
 import s from "./Header.module.css";
 import Link from "next/link";
 import HeaderContacts from "../headerContacts/HeaderContacts";
-import Router from "next/router";
 import RoofingIcon from "@mui/icons-material/Roofing";
 import PermDataSettingOutlinedIcon from "@mui/icons-material/PermDataSettingOutlined";
+import BurgerMenu from "../burgerMenu/BurgerMenu";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 export default function Header() {
   return (
     <header class={s.header}>
+      <div className={s.mobileMenu}>
+        <Link href={"/"}>
+          <a class={s.mobileMenu__link}>Kompromix</a>
+        </Link>
+        <BurgerMenu width={"auto"} />
+      </div>
       <div className="container">
         <HeaderContacts />
       </div>
-
       <nav class={s.header__nav}>
         <div className="container">
           <ul class={s.header__nav_list}>

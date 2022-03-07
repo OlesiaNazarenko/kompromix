@@ -17,6 +17,7 @@ export default function HeaderContacts() {
               role="presentation"
               width={120}
               height={100}
+              layout="responsive"
             />
           </a>
         </Link>

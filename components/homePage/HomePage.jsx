@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <>
       <section className={classNames("container", s.qualities)}>
-        <h1 className={s.title}>Kompomix це:</h1>
+        <h1 className={s.title}>KomProMix це:</h1>
         <div className={s.qualitiesWrap}>
           <div className={s.qualitiesWrap__box}>
             <AutoFixHighIcon className={s.qualitiesWrap__icon} />
@@ -71,9 +71,9 @@ export default function HomePage() {
               <Image
                 src={RoofingElements}
                 alt="Кровельные работы"
-                role="presentation"
                 width={500}
                 height={400}
+                layout="responsive"
               />
             </div>
             <h3>Покрівельні фасонні елементи</h3>
@@ -82,12 +82,15 @@ export default function HomePage() {
               монтажу покрівельних систем.{" "}
             </p>
             <div className={classNames(s.services__box, s.box1)}>
-              <Image
-                src={BoxImage1}
-                width={90}
-                height={40}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage1}
+                  width={90}
+                  height={60}
+                  layout="responsive"
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Конькова планка</h4>
               <p className={s.boxDesc}>
                 Необхідна для запобігання потраплянню дощової та талої води в
@@ -96,12 +99,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className={classNames(s.services__box, s.box2)}>
-              <Image
-                src={BoxImage2}
-                width={90}
-                height={60}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage2}
+                  width={90}
+                  layout="responsive"
+                  height={60}
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Планка примикання</h4>
               <p className={s.boxDesc}>
                 Планка примикання або стіновий захист - металевий кутник,
@@ -111,12 +117,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className={classNames(s.services__box, s.box3)}>
-              <Image
-                src={BoxImage3}
-                width={90}
-                height={60}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage3}
+                  width={90}
+                  height={60}
+                  layout="responsive"
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Єндова(жолоб)</h4>
               <p className={s.boxDesc}>
                 Єндова або планка внутрішнього стоку - елемент покрівлі, що
@@ -125,12 +134,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className={classNames(s.services__box, s.box4)}>
-              <Image
-                src={BoxImage4}
-                width={90}
-                height={60}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage4}
+                  width={90}
+                  layout="responsive"
+                  height={60}
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Декоративна накладка жолоба</h4>
               <p className={s.boxDesc}>
                 Основним призначенням декоративної планки, на відміну від назви,
@@ -140,12 +152,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className={classNames(s.services__box, s.box5)}>
-              <Image
-                src={BoxImage5}
-                width={90}
-                height={60}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage5}
+                  width={90}
+                  height={70}
+                  layout="responsive"
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Фронтонна планка</h4>
               <p className={s.boxDesc}>
                 Це є захист бокової частини схилу та протидіє боковим вітровим
@@ -155,12 +170,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className={classNames(s.services__box, s.box6)}>
-              <Image
-                src={BoxImage6}
-                width={90}
-                height={40}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage6}
+                  width={90}
+                  height={70}
+                  layout="responsive"
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Снігозатримувач</h4>
               <p className={s.boxDesc}>
                 Своєрідний бар'єр на шляху зсуву снігової маси у вигляді
@@ -170,12 +188,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className={classNames(s.services__box, s.box7)}>
-              <Image
-                src={BoxImage7}
-                width={90}
-                height={60}
-                className={s.boxImg}
-              />
+              <div className={s.boxImg}>
+                <Image
+                  src={BoxImage7}
+                  width={90}
+                  height={70}
+                  layout="responsive"
+                  className={s.boxImg_img}
+                />
+              </div>
               <h4 className={s.boxTitle}>Планка захисту карнизу</h4>
               <p className={s.boxDesc}>
                 Слугує для спрямування потоку води, що збігає з даху
@@ -191,7 +212,12 @@ export default function HomePage() {
           <div className={s.keyRoof}>
             <h3>Покрівля під ключ</h3>
             <div className={s.keyRoof__img}>
-              <Image src={KeyRoof} width={500} height={300} />
+              <Image
+                src={KeyRoof}
+                width={500}
+                height={300}
+                layout="responsive"
+              />
             </div>
             <p>
               Покрівля під ключ дозволить Вам повністю довіритись нашому досвіду

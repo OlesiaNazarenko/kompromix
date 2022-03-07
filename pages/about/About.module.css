@@ -1,21 +1,16 @@
 .aboutSection {
   position: relative;
   width: 100%;
-  padding: 30px;
+  padding: 0 30px;
   text-align: justify;
 }
-.aboutSection h1 {
-  text-align: center;
-}
+
 .aboutPageWorks {
   position: relative;
-  padding: 20px;
   margin: 0 auto;
   width: 90%;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 .img {
   width: 100%;
@@ -26,12 +21,10 @@
   cursor: pointer;
 }
 .img:nth-child(2) {
-  grid-column: 2;
-  grid-row: 2;
+  grid-row: 3;
 }
 .img:nth-child(3) {
-  grid-row: 1;
-  grid-column: 3;
+  grid-row: 5;
 }
 .AboutDesc:nth-child(1) {
   grid-column: 2;
@@ -41,8 +34,8 @@
   grid-row: 3;
 }
 .AboutDesc:nth-child(3) {
-  grid-column: 3;
   grid-row: 3;
+  grid-column: 3;
 }
 
 .AboutDesc:focus {
@@ -64,9 +57,8 @@
   text-transform: uppercase;
 }
 .AboutDesc_text {
-  width: 80%;
   font-size: 12px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 0.5rem;
   border: 1px solid var(--perfectLightBlue);
 }
@@ -81,11 +73,11 @@
 
 .sliderWrap {
   position: relative;
-  display: flex;
+  display: block;
   width: 100%;
 }
 .sliderText {
-  margin-left: 30px;
+  margin: 30px 0;
 }
 .sliderLink:hover,
 .sliderLink:active,
@@ -98,4 +90,47 @@
   top: 7px;
   left: 5px;
   margin-right: 5px;
+}
+.aboutPageIcon {
+  font-size: 50px;
+  position: relative;
+  top: 15px;
+  margin-right: 10px;
+  color: var(--blueColor);
+}
+@media screen and (min-width: 450px) {
+  .img:nth-child(3) {
+    grid-row: 3;
+  }
+  .img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sliderText {
+    font-size: 12px;
+    margin: 0 0 10px 30px;
+  }
+  .sliderWrap {
+    display: flex;
+  }
+  .img:nth-child(3) {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  .aboutPageWorks {
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .sliderText {
+    font-size: 16px;
+  }
+  .AboutDesc_text {
+    width: 80%;
+    padding: 20px;
+  }
 }
