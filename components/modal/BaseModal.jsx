@@ -44,7 +44,9 @@ export default function BaseModal({ buttonName }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} component="form">
-          <p class="modal__title">Залиште свої дані і ми Вам зателефонуємо:</p>
+          <p className="modal__title">
+            Залиште свої дані і ми Вам зателефонуємо:
+          </p>
           <TextField
             className={s.textfield}
             required

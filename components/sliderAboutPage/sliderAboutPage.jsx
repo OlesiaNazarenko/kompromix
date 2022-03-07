@@ -60,7 +60,7 @@ export default class SliderAboutPage extends Component {
           {this.images.map((item, index) => {
             return (
               <div key={index}>
-                <Image src={item} />
+                <Image src={item} alt="" />
               </div>
             );
           })}

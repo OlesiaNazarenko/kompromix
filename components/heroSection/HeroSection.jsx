@@ -7,11 +7,11 @@ import classNames from "classnames";
 export default function HeroSection() {
   return (
     <section className={classNames("container", "firstSection")}>
-      <div class={s.heroSection}>
-        <div class={s.heroSection_wrap}>
-          <div class={s.heroSection_desc}>
+      <div className={s.heroSection}>
+        <div className={s.heroSection_wrap}>
+          <div className={s.heroSection_desc}>
             <h1>Ми гарантуємо 100%:</h1>
-            <ul class={s.heroSection__list}>
+            <ul className={s.heroSection__list}>
               <li>- якісні вироби;</li>
               <li>- виконання робіт з монтажу.</li>
             </ul>
@@ -29,7 +29,7 @@ export default function HeroSection() {
           />
         </div>
       </div>
-      <div class={s.buttonWrap}>
+      <div className={s.buttonWrap}>
         <BaseModal buttonName="Замовити безкоштовну консультацію" />
       </div>
     </section>

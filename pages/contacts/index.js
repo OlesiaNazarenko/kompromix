@@ -19,7 +19,7 @@ export default function Contacts() {
           <ConnectWithoutContactIcon className={s.contactsIcon} />
           <div className={s.titleBox__textBox}>
             <h1>Контакти</h1>
-            <p>Як з нами зв'язатися?</p>
+            <p>Як з нами зв&#39;язатися?</p>
           </div>
         </div>
         <div className={s.contactsWrap}>
@@ -55,6 +55,7 @@ export default function Contacts() {
           Відвідайте нашу
           <a
             target="_blank"
+            rel="noreferrer"
             className={s.InstLink}
             href="https://www.instagram.com/kompromix"
           >
@@ -65,6 +66,7 @@ export default function Contacts() {
           <a
             className={s.InstLink}
             target="_blank"
+            rel="noreferrer"
             href="https://www.instagram.com/kompromix"
           >
             профіль
@@ -75,6 +77,7 @@ export default function Contacts() {
         <a
           className={s.InstLink}
           target="_blank"
+          rel="noreferrer"
           href="https://www.instagram.com/kompromix"
         >
           Перейти до профілю Kompromix в Instagram &#8594;{" "}

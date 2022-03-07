@@ -70,7 +70,7 @@ export default function HomePage() {
             <div className={s.RoofingElementsImg}>
               <Image
                 src={RoofingElements}
-                alt="Кровельные работы"
+                alt="Покрівельні роботи"
                 width={500}
                 height={400}
                 layout="responsive"
@@ -78,13 +78,14 @@ export default function HomePage() {
             </div>
             <h3>Покрівельні фасонні елементи</h3>
             <p>
-              Ряд комплектуючих і добірних елементів, обов'язково необхідний для
-              монтажу покрівельних систем.{" "}
+              Ряд комплектуючих і добірних елементів, обов&#39;язково необхідний
+              для монтажу покрівельних систем.{" "}
             </p>
             <div className={classNames(s.services__box, s.box1)}>
               <div className={s.boxImg}>
                 <Image
                   src={BoxImage1}
+                  alt="Конькова планка"
                   width={90}
                   height={60}
                   layout="responsive"
@@ -105,6 +106,7 @@ export default function HomePage() {
                   width={90}
                   layout="responsive"
                   height={60}
+                  alt="Планка примикання"
                   className={s.boxImg_img}
                 />
               </div>
@@ -122,6 +124,7 @@ export default function HomePage() {
                   src={BoxImage3}
                   width={90}
                   height={60}
+                  alt="Єндова(жолоб)"
                   layout="responsive"
                   className={s.boxImg_img}
                 />
@@ -140,6 +143,7 @@ export default function HomePage() {
                   width={90}
                   layout="responsive"
                   height={60}
+                  alt="Декоративна накладка жолоба"
                   className={s.boxImg_img}
                 />
               </div>
@@ -158,6 +162,7 @@ export default function HomePage() {
                   width={90}
                   height={70}
                   layout="responsive"
+                  alt="Фронтонна планка"
                   className={s.boxImg_img}
                 />
               </div>
@@ -177,14 +182,15 @@ export default function HomePage() {
                   height={70}
                   layout="responsive"
                   className={s.boxImg_img}
+                  alt="Снігозатримувач"
                 />
               </div>
               <h4 className={s.boxTitle}>Снігозатримувач</h4>
               <p className={s.boxDesc}>
-                Своєрідний бар'єр на шляху зсуву снігової маси у вигляді
+                Своєрідний бар&#39;єр на шляху зсуву снігової маси у вигляді
                 металевої планки або точкового елементу /крягу/. Монтаж
                 снігозахисту проводиться таким чином щоби він розміщувався в
-                межах стінс споруди, тобто не знаходився на звісі покрівлі.
+                межах стін споруди, тобто не знаходився на звісі покрівлі.
               </p>
             </div>
             <div className={classNames(s.services__box, s.box7)}>
@@ -195,6 +201,7 @@ export default function HomePage() {
                   height={70}
                   layout="responsive"
                   className={s.boxImg_img}
+                  alt="Планка захисту карнизу"
                 />
               </div>
               <h4 className={s.boxTitle}>Планка захисту карнизу</h4>
@@ -216,6 +223,7 @@ export default function HomePage() {
                 src={KeyRoof}
                 width={500}
                 height={300}
+                alt="Покрівля під ключ"
                 layout="responsive"
               />
             </div>
@@ -235,7 +243,7 @@ export default function HomePage() {
               <li>- бітумні покрівлі.</li>
             </ul>
 
-            <div class={s.buttonWrap}>
+            <div className={s.buttonWrap}>
               <BaseModal buttonName="Дізнатись подробиці і ціни" />
             </div>
           </div>

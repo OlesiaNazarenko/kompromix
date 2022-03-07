@@ -7,10 +7,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import BaseModal from "../modal/BaseModal";
 export default function HeaderContacts() {
   return (
-    <div class={s.header__contactsSection}>
-      <div class={s.contactsSection_logo}>
+    <div className={s.header__contactsSection}>
+      <div className={s.contactsSection_logo}>
         <Link href={"/"}>
-          <a class={s.header__nav_logo}>
+          <a className={s.header__nav_logo}>
             <Image
               src={Logo}
               alt="Кровельное ателье 'Komprimix'"
@@ -21,21 +21,21 @@ export default function HeaderContacts() {
             />
           </a>
         </Link>
-        <span class={s.logoDesc}>
+        <span className={s.logoDesc}>
           Покрівельні роботи в Запоріжжі та Запорізькій області
         </span>
       </div>
-      <div class={s.contactsSection_getTheCall}>
+      <div className={s.contactsSection_getTheCall}>
         <BaseModal buttonName="Зворотній дзвінок" />
         <span>Щодня з 8:00 до 20:00</span>
       </div>
-      <div class={s.contactsSection_contacts}>
-        <p class={s.contactsSection_contacts__link}>
-          <CallIcon className={s.callIcon} />
+      <div className={s.contactsSection_contacts}>
+        <p className={s.contactsSection_contacts__link}>
+          <CallIcon classNameName={s.callIcon} />
           <a href="tel: +380 000 000 00">+38 097 970 73 40</a>
         </p>
-        <p class={s.contactsSection_contacts__link}>
-          <EmailIcon className={s.emailIcon} />
+        <p className={s.contactsSection_contacts__link}>
+          <EmailIcon classNameName={s.emailIcon} />
           <a href="mailto: zakaz@gmail.com">kompromix.zp@gmail.com</a>
         </p>
       </div>

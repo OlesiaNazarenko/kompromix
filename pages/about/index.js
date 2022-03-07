@@ -28,17 +28,17 @@ export default function About() {
           Про нас
         </h1>
         <p>
-          Будівельна компанія "Kompromix" - це команда професіоналів, які
-          відповідально ставляться до виконання своїх обов'язків та дбають про
-          виконання усіх робіт вчасно. В нашій компанії працюють досвідчені
-          фахівці, за плечима яких безліч готових проектів і задоволених
-          клієнтів.
+          Будівельна компанія &ldquo;Kompromix&rdquo; - це команда
+          професіоналів, які відповідально ставляться до виконання своїх
+          обов&#39;язків та дбають про виконання усіх робіт вчасно. В нашій
+          компанії працюють досвідчені фахівці, за плечима яких безліч готових
+          проектів і задоволених клієнтів.
         </p>
         <div className={s.aboutPageWorks}>
-          {dataImg.map((item) => {
+          {dataImg.map((item, index) => {
             return (
-              <div className={s.img}>
-                <Link href={"/projects"}>
+              <div className={s.img} key={index}>
+                <Link href={"/projects"} passHref>
                   <Image
                     src={item}
                     width={350}
@@ -96,13 +96,14 @@ export default function About() {
             <p className={s.sliderText}>
               Дивіться наші роботи у розділі{" "}
               <Link href={"/projects"}>
-                <a class={s.sliderLink}>"Проекти"</a>
+                <a className={s.sliderLink}>&ldquo;Проекти&rdquo;</a>
               </Link>{" "}
               або в
               <a
                 href={"https://www.instagram.com/kompromix"}
                 className={s.sliderLink}
                 target="_blank"
+                rel="noreferrer"
               >
                 {" "}
                 нашому акаунті в мережі Instagram
@@ -113,12 +114,12 @@ export default function About() {
             <p className={s.sliderText}>
               А наші вироби та матеріали Ви можете знайти у розділі{" "}
               <Link href={"/shop"}>
-                <a className={s.sliderLink}>"Магазин"</a>
+                <a className={s.sliderLink}>&ldquo;Магазин&rdquo;</a>
               </Link>
               .
             </p>
             <p className={s.sliderText}>
-              <div class={s.buttonWrap}>
+              <div className={s.buttonWrap}>
                 <BaseModal buttonName="Отримати консультацію" />
               </div>
             </p>
