@@ -7,8 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "netlify deploy -p",
-    "predeploy": "npm run build",
-    "export": "next export"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
