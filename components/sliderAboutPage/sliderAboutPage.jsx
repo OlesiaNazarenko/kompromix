@@ -7,37 +7,7 @@ import Img5 from "../../public/sliderAboutPage/5.jpg";
 import Image from "next/image";
 import React, { Component } from "react";
 import Slider from "react-slick";
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{
-//         ...style,
-//         display: "block",
-//         background: "#222831",
-//         borderRadius: "50%",
-//       }}
-//       onClick={onClick}
-//     />
-//   );
-// }
 
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{
-//         ...style,
-//         display: "block",
-//         background: "#222831",
-//         borderRadius: "50%",
-//       }}
-//       onClick={onClick}
-//     />
-//   );
-// }
 export default class SliderAboutPage extends Component {
   state = {
     display: true,

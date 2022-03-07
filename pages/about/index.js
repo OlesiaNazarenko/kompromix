@@ -9,7 +9,7 @@ import Img1 from "../../public/AboutPage/1.jpg";
 import Img2 from "../../public/AboutPage/2.jpg";
 import Img3 from "../../public/AboutPage/3.jpg";
 import ArtTrackIcon from "@mui/icons-material/ArtTrack";
-import SliderAboutPage from "../../components/sliderAboutPage/sliderAboutPage";
+import SliderAboutPage from "../../components/SliderAboutPage/sliderAboutPage";
 import s from "./About.module.css";
 import BaseModal from "../../components/modal/BaseModal";
 export default function About() {
