@@ -1,8 +1,8 @@
 .header__contactsSection {
-  display: flex;
   position: relative;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+  display: none;
 }
 .contactsSection_logo {
   align-items: center;
@@ -10,8 +10,12 @@
   display: flex;
 }
 .header__nav_logo {
+  display: block;
   width: 140px;
   padding: 5px;
+}
+.header__nav_logo:hover {
+  cursor: pointer;
 }
 .logoDesc {
   width: 50%;
@@ -33,6 +37,7 @@
 .contactsSection_contacts {
   position: relative;
   text-align: left;
+  display: none;
   margin-top: 5px;
   margin-left: 80px;
 }
@@ -45,4 +50,17 @@
 }
 .contactsSection_contacts__link:hover {
   color: var(--perfectLightBlue);
+}
+@media screen and (min-width: 768px) {
+  .header__contactsSection {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .contactsSection_contacts {
+    display: block;
+  }
+  .header__contactsSection {
+    justify-content: space-between;
+  }
 }

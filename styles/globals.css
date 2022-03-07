@@ -16,9 +16,10 @@
 
 html,
 body {
+  position: relative;
   padding: 0;
   margin: 0;
-  /* background-color: var(--backgroundColor); */
+  background-color: var(--backgroundColor);
   color: var(--textColor);
   font-family: var(--mainFont);
 }
@@ -40,11 +41,6 @@ ul {
   box-sizing: border-box;
 }
 
-.container {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-}
 .buttonGetTheCall {
   background-color: transparent;
   background-image: linear-gradient(
@@ -79,4 +75,116 @@ ul {
 input::placeholder,
 input:focus {
   border-bottom: 1px solid #687864;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px 0 10px;
+}
+@media screen and (min-width: 350px) {
+  .container {
+    width: 300px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 450px) {
+  .container {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 600px;
+  }
+  .qualitiesWrap {
+    display: block;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1000px;
+  }
+  .qualitiesWrap {
+    display: grid;
+  }
+}
+/* MOBILE MENU*/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 10px;
+  top: 10px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--backgroundColor);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 54px;
+  width: 54px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: var(--backgroundColor);
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: var(--backgroundColor);
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  text-align: center;
+  margin: 100px 0;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+/* MOBILE MENU*/
+.menu-item {
+  display: block;
+  margin: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .firstSection {
+    margin-top: 100px;
+  }
 }

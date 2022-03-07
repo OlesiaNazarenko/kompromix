@@ -76,7 +76,7 @@
 
 .nav_list__sublist {
   position: relative;
-  left: -100px;
+
   font-size: 24px;
   text-align: left;
   color: var(--textColor);
@@ -126,13 +126,12 @@
 .navSublist__desc {
   text-align: left;
   color: var(--textColor);
-  font-size: 30px;
+  font-size: 24px;
 }
 .navSublist__desc_icon {
-  font-size: 150px;
+  font-size: 100px;
   position: relative;
   left: -20px;
-  top: 15px;
   color: var(--blueColor);
 }
 .navSublist__desc_text {
@@ -141,4 +140,54 @@
   width: 40px;
   position: relative;
   top: -15px;
+}
+.mobileMenu {
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 10;
+  height: 50px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--perfectLightBlue),
+    var(--blueColor)
+  );
+  color: var(--backgroundColor);
+}
+.mobileMenu__link {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .header__nav_list {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__nav_list {
+    display: flex;
+  }
+  .mobileMenu {
+    display: none;
+  }
+  .nav_list__sublist {
+    margin: -30px 0 0 40px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .nav_list__sublist {
+    font-size: 24px;
+    margin: 0;
+  }
+  .navSublist__desc {
+    font-size: 30px;
+  }
+  .navSublist__desc_icon {
+    top: 15px;
+    font-size: 150px;
+  }
 }

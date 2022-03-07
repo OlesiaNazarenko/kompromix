@@ -5,20 +5,35 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "netlify deploy -p",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@madzadev/image-slider": "^1.0.8",
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.2",
+    "@zeit/next-css": "^1.0.1",
     "classnames": "^2.3.1",
+    "flat-carousel": "^0.0.1",
     "next": "12.0.10",
+    "next-images": "^1.8.4",
+    "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-burger-menu": "^3.0.6",
+    "react-carousel-minimal": "^1.4.1",
+    "react-dom": "17.0.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.0.6"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.2.7",
     "eslint": "8.9.0",
-    "eslint-config-next": "12.0.10"
+    "eslint-config-next": "12.0.10",
+    "react-alice-carousel": "^2.5.1"
   }
 }

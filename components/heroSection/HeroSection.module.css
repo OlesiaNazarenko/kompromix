@@ -1,32 +1,92 @@
 .heroSection {
-  display: flex;
-  font-size: 20px;
-  padding: 20px;
-  justify-content: right;
+  display: block;
+  font-size: 12px;
+  margin-top: 40px;
 }
 .heroSection_wrap {
-  width: 39%;
-  height: 220px;
   color: var(--textColor);
   position: absolute;
-  top: 100px;
-  left: 10px;
+
+  top: 20px;
+  height: 100px;
+  width: 70%;
   z-index: 2;
   text-align: left;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
 }
 .heroSection_desc {
-  padding: 20px;
+  padding: 5px;
+  font-size: 10px;
   height: 100%;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.25);
 }
 .buttonWrap {
-  position: absolute;
-  margin-top: -100px;
-  margin-left: 25px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 .heroSection__list {
-  font-size: 22px;
+  font-size: 10px;
   font-weight: 600;
+}
+.heroImgWrap {
+  position: relative;
+}
+@media screen and (min-width: 450px) {
+  .heroSection_wrap {
+    top: 50px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .heroSection_desc {
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .heroSection_wrap {
+    height: 130px;
+    width: auto;
+    position: absolute;
+  }
+  .heroSection__list {
+    font-size: 14px;
+  }
+  .buttonWrap {
+    position: absolute;
+
+    margin-top: -100px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .heroSection {
+    display: flex;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .heroImgWrap {
+    display: block;
+    margin-left: 10%;
+    width: 80vw;
+  }
+  .heroSection_wrap {
+    width: 39%;
+    height: 220px;
+    color: var(--textColor);
+    top: 100px;
+    left: 10px;
+    backdrop-filter: blur(4px);
+  }
+  .heroSection__list {
+    font-size: 22px;
+  }
+  .buttonWrap {
+    margin-left: 25px;
+  }
+  .heroSection_desc {
+    font-size: 18px;
+  }
 }

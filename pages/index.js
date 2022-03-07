@@ -2,6 +2,8 @@ import Header from "../components/header/Header";
 import Head from "next/head";
 import HeroSection from "../components/heroSection/HeroSection";
 import Footer from "../components/footer/Footer";
+import HomePage from "../components/homePage/HomePage";
+
 export default function Index() {
   return (
     <>
@@ -21,7 +23,11 @@ export default function Index() {
         />
       </Head>
       <Header />
+
       <HeroSection />
+      <main>
+        <HomePage />
+      </main>
       <Footer />
     </>
   );

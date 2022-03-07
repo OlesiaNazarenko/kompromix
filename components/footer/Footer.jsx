@@ -12,13 +12,13 @@ export default function Footer() {
     <footer className={s.footer}>
       <div className={classNames(s.footerWrap, "container")}>
         <div
-          class={classNames(
+          className={classNames(
             styles.contactsSection_logo,
             s.contactsSection_logo
           )}
         >
           <Link href={"/"}>
-            <a class={styles.header__nav_logo}>
+            <a className={styles.header__nav_logo}>
               <Image
                 src={Logo}
                 alt="Кровельное ателье 'Komprimix'"
@@ -28,69 +28,69 @@ export default function Footer() {
               />
             </a>
           </Link>
-          <span class={s.logoDesc}>
+          <span className={s.logoDesc}>
             Покрівельні роботи в Запоріжжі та Запорізькій області
           </span>
         </div>
-        <ul class={s.footer__nav_list}>
-          <li class={s.nav_list__item}>
+        <ul className={s.footer__nav_list}>
+          <li className={s.nav_list__item}>
             <Link href={"/"}>
-              <a class={s.nav_list__link}>Головна</a>
+              <a className={s.nav_list__link}>Головна</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/about"}>
-              <a class={s.nav_list__link}>Про компанію</a>
+              <a className={s.nav_list__link}>Про компанію</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a class={(s.dropdown, s.nav_list__link)}>Проекти</a>
+              <a className={(s.dropdown, s.nav_list__link)}>Проекти</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/shop"}>
-              <a class={s.nav_list__link}>Магазин</a>
+              <a className={s.nav_list__link}>Магазин</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/contacts"}>
-              <a class={s.nav_list__link}>Контакти</a>
+              <a className={s.nav_list__link}>Контакти</a>
             </Link>
           </li>
         </ul>
 
-        <ul class={s.footer__nav_list}>
-          <li class={s.nav_list__item}>
+        <ul className={s.footer__nav_list}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects/roofing"}>
-              <a class={s.nav_list__link}>Покрівельні роботи</a>
+              <a className={s.nav_list__link}>Покрівельні роботи</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects/tin"}>
-              <a class={s.nav_list__link}>Бляшані роботи</a>
+              <a className={s.nav_list__link}>Бляшані роботи</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a class={(s.dropdown, s.nav_list__link)}>
+              <a className={(s.dropdown, s.nav_list__link)}>
                 Руйнування від вологи
               </a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a class={s.nav_list__link}>Ковпаки на заборонні стовбчики</a>
+              <a className={s.nav_list__link}>Ковпаки на заборонні стовбчики</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a class={s.nav_list__link}>Парапети</a>
+              <a className={s.nav_list__link}>Парапети</a>
             </Link>
           </li>
-          <li class={s.nav_list__item}>
+          <li classNameName={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a class={s.nav_list__link}>Відливи віконні</a>
+              <a classNameName={s.nav_list__link}>Відливи віконні</a>
             </Link>
           </li>
         </ul>
@@ -104,6 +104,7 @@ export default function Footer() {
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             className={s.linkBox__link}
             href="https://www.instagram.com/kompromix"
           >

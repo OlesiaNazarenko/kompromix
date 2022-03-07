@@ -5,6 +5,7 @@ import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import classNames from "classnames";
 import s from "./Contacts.module.css";
 export default function Contacts() {
   return (
@@ -13,12 +14,12 @@ export default function Contacts() {
         <title>Kompromix.Контакты</title>
       </Head>
       <Header />
-      <section className="container">
+      <section className={classNames("container", "firstSection")}>
         <div className={s.titleBox}>
           <ConnectWithoutContactIcon className={s.contactsIcon} />
           <div className={s.titleBox__textBox}>
             <h1>Контакти</h1>
-            <p>Як з нами зв'язатися?</p>
+            <p>Як з нами зв&#39;язатися?</p>
           </div>
         </div>
         <div className={s.contactsWrap}>
@@ -54,6 +55,7 @@ export default function Contacts() {
           Відвідайте нашу
           <a
             target="_blank"
+            rel="noreferrer"
             className={s.InstLink}
             href="https://www.instagram.com/kompromix"
           >
@@ -64,6 +66,7 @@ export default function Contacts() {
           <a
             className={s.InstLink}
             target="_blank"
+            rel="noreferrer"
             href="https://www.instagram.com/kompromix"
           >
             профіль
@@ -74,6 +77,7 @@ export default function Contacts() {
         <a
           className={s.InstLink}
           target="_blank"
+          rel="noreferrer"
           href="https://www.instagram.com/kompromix"
         >
           Перейти до профілю Kompromix в Instagram &#8594;{" "}

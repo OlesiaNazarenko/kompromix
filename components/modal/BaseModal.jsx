@@ -44,7 +44,9 @@ export default function BaseModal({ buttonName }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style} component="form">
-          <p class="modal__title">Залиште свої дані і ми Вам зателефонуємо:</p>
+          <p className="modal__title">
+            Залиште свої дані і ми Вам зателефонуємо:
+          </p>
           <TextField
             className={s.textfield}
             required
@@ -58,6 +60,7 @@ export default function BaseModal({ buttonName }) {
             required
             id="standard-basic"
             autoComplete="off"
+            inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
             label="Телефон"
             variant="standard"
           />
