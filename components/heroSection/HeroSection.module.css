@@ -6,7 +6,7 @@
 .heroSection_wrap {
   color: var(--textColor);
   position: absolute;
-  top: 60px;
+  top: 30px;
   /* display: none; */
   height: 140px;
   width: 100%;
@@ -55,6 +55,7 @@
   }
   .buttonWrap {
     margin-top: 240px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -75,7 +76,7 @@
   .buttonWrap {
     position: absolute;
     margin-top: 280px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -107,5 +108,6 @@
   .buttonWrap {
     margin-left: 2.5%;
     margin-top: 300px;
+    font-size: 17px;
   }
 }
