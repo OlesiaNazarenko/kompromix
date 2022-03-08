@@ -146,6 +146,8 @@
   position: fixed;
   display: block;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
   height: 50px;
   background-image: linear-gradient(
