@@ -6,30 +6,32 @@
 .heroSection_wrap {
   color: var(--textColor);
   position: absolute;
-
-  top: 20px;
-  height: 100px;
-  width: 70%;
+  top: 60px;
+  /* display: none; */
+  height: 140px;
+  width: 100%;
   z-index: 2;
   text-align: left;
   backdrop-filter: blur(10px);
 }
 .heroSection_desc {
-  padding: 5px;
-  font-size: 10px;
+  padding: 10px;
+  font-size: 16px;
   height: 100%;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.25);
 }
 .buttonWrap {
-  position: relative;
-  margin-top: 20px;
+  position: absolute;
+  display: none;
+  margin-top: 240px;
   margin-bottom: 20px;
-  display: flex;
+  font-size: 14px;
   justify-content: center;
+  z-index: 2;
 }
 .heroSection__list {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
 }
 .heroImgWrap {
@@ -37,28 +39,43 @@
 }
 @media screen and (min-width: 450px) {
   .heroSection_wrap {
-    top: 50px;
-    width: 50%;
+    display: block;
+    top: 60px;
+    width: 70%;
+  }
+  .buttonWrap {
+    display: flex;
+    margin-top: 180px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .heroSection_wrap {
+    top: 120px;
+    width: 340px;
+  }
+  .buttonWrap {
+    margin-top: 240px;
   }
 }
 @media screen and (min-width: 768px) {
   .heroSection_desc {
     padding: 20px;
-    font-size: 14px;
+    font-size: 18px;
     background: rgba(255, 255, 255, 0.25);
   }
   .heroSection_wrap {
-    height: 130px;
+    top: 340px;
+    height: 160px;
     width: auto;
     position: absolute;
   }
   .heroSection__list {
-    font-size: 14px;
+    font-size: 18px;
   }
   .buttonWrap {
     position: absolute;
-
-    margin-top: -100px;
+    margin-top: 280px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -69,24 +86,26 @@
   }
   .heroImgWrap {
     display: block;
-    margin-left: 10%;
+    margin-left: 15%;
     width: 80vw;
   }
   .heroSection_wrap {
-    width: 39%;
+    width: 450px;
     height: 220px;
     color: var(--textColor);
-    top: 100px;
-    left: 10px;
+    top: 280px;
+    left: 5%;
     backdrop-filter: blur(4px);
   }
   .heroSection__list {
     font-size: 22px;
   }
-  .buttonWrap {
-    margin-left: 25px;
-  }
+
   .heroSection_desc {
     font-size: 18px;
+  }
+  .buttonWrap {
+    margin-left: 2.5%;
+    margin-top: 300px;
   }
 }

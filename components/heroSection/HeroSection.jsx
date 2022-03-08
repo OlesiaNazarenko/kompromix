@@ -6,7 +6,7 @@ import BaseModal from "../modal/BaseModal";
 import classNames from "classnames";
 export default function HeroSection() {
   return (
-    <section className={classNames("container", "firstSection")}>
+    <section>
       <div className={s.heroSection}>
         <div className={s.heroSection_wrap}>
           <div className={s.heroSection_desc}>
@@ -18,6 +18,9 @@ export default function HeroSection() {
             <p>Ви переконаєтесь, що наша пропоцизія краща! </p>
           </div>
         </div>
+        <div className={s.buttonWrap}>
+          <BaseModal buttonName="Замовити безкоштовну консультацію" />
+        </div>
         <div className={s.heroImgWrap}>
           <Image
             src={HeroImg}
@@ -28,9 +31,6 @@ export default function HeroSection() {
             className={s.heroImg}
           />
         </div>
-      </div>
-      <div className={s.buttonWrap}>
-        <BaseModal buttonName="Замовити безкоштовну консультацію" />
       </div>
     </section>
   );
