@@ -30,8 +30,8 @@
   border: 1px solid var(--blueColor);
   border-radius: 0.5rem;
 }
-.CallIcon,
-.EmailIcon {
+.contactWrap__link .CallIcon,
+.contactWrap__link .EmailIcon {
   position: relative;
   top: 5px;
   right: 3px;
@@ -53,8 +53,8 @@
     width: 90%;
     margin: 0 auto;
   }
-  .CallIcon,
-  .EmailIcon {
+  .contactWrap__link .CallIcon,
+  .contactWrap__link .EmailIcon {
     top: 3px;
     font-size: 14px;
   }
