@@ -91,7 +91,7 @@ export default function About() {
               TextTextTextText TextTextTextText TextTextTextTextText TextText
               TextTextTextTextText TextTextTextTextText TextTextTextTextText
               TextTextTextText TextTextTextTextText TextTextTextText TextText
-              TextTextText TextTextTextText TextTextTextTextText TextTextText
+              TextTextText
             </p>
             <p className={s.sliderText}>
               Дивіться наші роботи у розділі{" "}
