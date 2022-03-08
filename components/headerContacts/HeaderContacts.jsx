@@ -31,11 +31,11 @@ export default function HeaderContacts() {
       </div>
       <div className={s.contactsSection_contacts}>
         <p className={s.contactsSection_contacts__link}>
-          <CallIcon classNameName={s.callIcon} />
+          <CallIcon className={s.callIcon} />
           <a href="tel: +380 000 000 00">+38 097 970 73 40</a>
         </p>
         <p className={s.contactsSection_contacts__link}>
-          <EmailIcon classNameName={s.emailIcon} />
+          <EmailIcon className={s.emailIcon} />
           <a href="mailto: zakaz@gmail.com">kompromix.zp@gmail.com</a>
         </p>
       </div>

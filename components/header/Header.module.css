@@ -100,7 +100,7 @@
 .navSublist {
   position: fixed;
   width: 100%;
-  top: 160px;
+  top: 170px;
   left: 0;
   opacity: 0;
   display: flex;
@@ -110,6 +110,7 @@
   height: 200px;
   z-index: 5;
   visibility: hidden;
+  border-bottom: 1px solid var(--perfectLightBlue);
 }
 .header__nav .nav_list__item:hover .navSublist,
 .header__nav .nav_list__item:active .navSublist {

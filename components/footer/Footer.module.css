@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  padding: 0 0 40px 0;
+  padding: 20px 0 40px 0;
   background-color: var(--blueColor);
   margin-top: 40px;
   font-weight: 200;
@@ -58,6 +58,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 0 40px 0;
+  }
   .footerWrap {
     display: flex;
     font-size: 10px;

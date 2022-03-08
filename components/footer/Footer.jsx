@@ -10,7 +10,7 @@ import classNames from "classnames";
 export default function Footer() {
   return (
     <footer className={s.footer}>
-      <div className={classNames(s.footerWrap, "container")}>
+      <div className={classNames("container", s.footerWrap)}>
         <div
           className={classNames(
             styles.contactsSection_logo,
