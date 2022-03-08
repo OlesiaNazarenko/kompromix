@@ -8,14 +8,14 @@
   position: absolute;
   top: 30px;
   /* display: none; */
-  height: 140px;
+  height: 150px;
   width: 100%;
   z-index: 2;
   text-align: left;
   backdrop-filter: blur(10px);
 }
 .heroSection_desc {
-  padding: 10px 10px 20px 10px;
+  padding: 10px;
   font-size: 16px;
   height: 100%;
   margin-bottom: 20px;
@@ -46,9 +46,6 @@
   .buttonWrap {
     display: flex;
     margin-top: 180px;
-  }
-  .heroSection_desc {
-    padding: 10px;
   }
 }
 @media screen and (min-width: 600px) {
