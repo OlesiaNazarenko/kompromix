@@ -15,7 +15,7 @@
   backdrop-filter: blur(10px);
 }
 .heroSection_desc {
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
   font-size: 16px;
   height: 100%;
   margin-bottom: 20px;
@@ -46,6 +46,9 @@
   .buttonWrap {
     display: flex;
     margin-top: 180px;
+  }
+  .heroSection_desc {
+    padding: 10px;
   }
 }
 @media screen and (min-width: 600px) {

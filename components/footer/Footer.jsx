@@ -88,9 +88,9 @@ export default function Footer() {
               <a className={s.nav_list__link}>Парапети</a>
             </Link>
           </li>
-          <li classNameName={s.nav_list__item}>
+          <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a classNameName={s.nav_list__link}>Відливи віконні</a>
+              <a className={s.nav_list__link}>Відливи віконні</a>
             </Link>
           </li>
         </ul>

@@ -109,7 +109,6 @@ export default function About() {
                 нашому акаунті в мережі Instagram
                 <InstagramIcon className={s.InstIcon} />
               </a>
-              .
             </p>
             <p className={s.sliderText}>
               А наші вироби та матеріали Ви можете знайти у розділі{" "}
