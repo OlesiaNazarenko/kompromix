@@ -2,3 +2,7 @@
   margin: 60px auto;
   text-align: center;
 }
+.contactsSection_contacts:focus {
+  border-color: transparent;
+  outline: transparent;
+}
