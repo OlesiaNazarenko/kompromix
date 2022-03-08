@@ -32,7 +32,7 @@ export default function BaseModal({ buttonName }) {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className="baseModalWrap">
       <Button className="buttonGetTheCall" onClick={handleOpen}>
         {buttonName}
       </Button>
