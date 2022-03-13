@@ -19,7 +19,7 @@ export default function Header() {
         <Link href={"/"}>
           <a className={s.mobileMenu__link}>Kompromix</a>
         </Link>
-        <BurgerMenu width={"auto"} />
+        <BurgerMenu width={"100%"} />
       </div>
       <div className="container">
         <HeaderContacts />
