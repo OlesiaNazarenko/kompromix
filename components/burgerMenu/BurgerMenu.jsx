@@ -1,6 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
-
+import BaseModal from "../modal/BaseModal";
 import s from "./BurgerMenu.module.css";
 export default function BurgerMenu(props) {
   return (
@@ -30,6 +30,9 @@ export default function BurgerMenu(props) {
         <p>
           <a href="mailto: zakaz@gmail.com">kompromix.zp@gmail.com</a>
         </p>
+      </div>
+      <div>
+        <BaseModal buttonName="Зворотній дзвінок" />
       </div>
     </Menu>
   );
