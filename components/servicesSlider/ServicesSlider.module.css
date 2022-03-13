@@ -18,14 +18,14 @@
   font-size: 12px;
   text-transform: uppercase;
 }
-.services__icon {
+.services .services__icon {
   font-size: 24px;
 }
 @media screen and (min-width: 450px) {
   .textWrap__desc {
     font-size: 14px;
   }
-  .services__icon {
+  .services .services__icon {
     font-size: 56px;
   }
 }
@@ -41,7 +41,7 @@
   .textWrap__title {
     font-size: 46px;
   }
-  .services__icon {
+  .services .services__icon {
     font-size: 100px;
   }
 }

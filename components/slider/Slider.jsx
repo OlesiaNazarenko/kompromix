@@ -48,6 +48,7 @@ export default function Slider({ data }) {
                   alt={item.title}
                   role="presentation"
                   layout="fill"
+                  priority={true}
                 />
               </div>
               <h3 className={s.slider__title}>{item.title}</h3>

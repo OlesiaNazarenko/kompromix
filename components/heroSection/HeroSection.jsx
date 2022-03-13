@@ -27,6 +27,7 @@ export default function HeroSection() {
             alt="Кровельные работы"
             width={800}
             height={400}
+            priority={true}
             layout="responsive"
             className={s.heroImg}
           />
