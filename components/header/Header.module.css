@@ -130,7 +130,7 @@
   display: flex;
   margin: 20px 0;
 }
-.navSublist__desc_icon {
+.navSublist .navSublist__desc_icon {
   font-size: 150px;
   position: relative;
   left: -20px;
@@ -209,7 +209,7 @@
     margin: 0;
   }
 
-  .navSublist__desc_icon {
+  .navSublist .navSublist__desc_icon {
     top: 15px;
     font-size: 150px;
   }
