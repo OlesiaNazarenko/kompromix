@@ -63,34 +63,29 @@ export default function Footer() {
         <ul className={s.footer__nav_list}>
           <li className={s.nav_list__item}>
             <Link href={"/projects/roofing"}>
-              <a className={s.nav_list__link}>Покрівельні роботи</a>
+              <a className={s.nav_list__link}>Заміна покрівлі</a>
             </Link>
           </li>
           <li className={s.nav_list__item}>
             <Link href={"/projects/tin"}>
-              <a className={s.nav_list__link}>Бляшані роботи</a>
+              <a className={s.nav_list__link}>Покрівля з нуля, будівля даху</a>
             </Link>
           </li>
           <li className={s.nav_list__item}>
             <Link href={"/projects"}>
               <a className={(s.dropdown, s.nav_list__link)}>
-                Руйнування від вологи
+                Реконструкція, зміна форми даху
               </a>
             </Link>
           </li>
           <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a className={s.nav_list__link}>Ковпаки на заборонні стовбчики</a>
+              <a className={s.nav_list__link}>Покрівля під ключ</a>
             </Link>
           </li>
           <li className={s.nav_list__item}>
             <Link href={"/projects"}>
-              <a className={s.nav_list__link}>Парапети</a>
-            </Link>
-          </li>
-          <li className={s.nav_list__item}>
-            <Link href={"/projects"}>
-              <a className={s.nav_list__link}>Відливи віконні</a>
+              <a className={s.nav_list__link}>Окремі вузли у покрівлі</a>
             </Link>
           </li>
         </ul>

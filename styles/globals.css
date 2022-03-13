@@ -2,7 +2,7 @@
 
 :root {
   --lightBlueColor: #8fc1e3;
-  --lightBlueColor2: #b4dfe5;
+  --lightBlueColor2: rgb(214, 234, 248);
   --darkBlueColor: #31708e;
   --darkBlueColor2: #303c6c;
   --brightBlueColor: #3b8beb;
@@ -40,7 +40,38 @@ ul {
 * {
   box-sizing: border-box;
 }
-
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+  position: absolute;
+  width: 80px !important;
+  height: 80px !important;
+  background-color: var(--backgroundColor);
+  color: var(--textColor) !important;
+  border-radius: 0%;
+  margin-top: 0 !important;
+  right: 100px !important;
+  top: 0 !important;
+  left: auto !important;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.swiper-button-next {
+  right: 10px !important;
+}
+.swiper-wrapper {
+  margin-top: 125px !important;
+  height: 80% !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-prev:active,
+.swiper-button-next:hover,
+.swiper-button-next:active {
+  color: var(--blueColor) !important;
+}
+.swiper-pagination-bullet-active-main {
+  background-color: var(--lightBlueColor) !important;
+}
 .baseModalWrap .buttonGetTheCall {
   background-color: transparent;
   background-image: linear-gradient(
@@ -85,19 +116,24 @@ input:focus {
 }
 @media screen and (min-width: 350px) {
   .container {
-    width: 300px;
     padding: 0;
   }
 }
 @media screen and (min-width: 450px) {
   .container {
-    width: 400px;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .container {
+    width: 430px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 600px;
+    width: 700px;
   }
+
   .qualitiesWrap {
     display: block;
   }
@@ -108,6 +144,10 @@ input:focus {
   }
   .qualitiesWrap {
     display: grid;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex !important;
   }
 }
 /* MOBILE MENU*/

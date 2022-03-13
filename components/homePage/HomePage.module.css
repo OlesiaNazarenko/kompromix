@@ -1,6 +1,7 @@
-.qualitiesWrap {
+/* .qualitiesWrap {
   display: block;
 }
+
 .qualitiesWrap__box {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -196,4 +197,7 @@
   .services h3 {
     margin: 0;
   }
+} */
+.homePageWrap {
+  background: linear-gradient(to bottom, var(--lightBlueColor2) 70%, white 30%);
 }

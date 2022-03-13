@@ -27,8 +27,15 @@
 .contactsWrap__box {
   margin-bottom: 20px;
   padding: 10px 30px;
-  border: 1px solid var(--blueColor);
-  border-radius: 0.5rem;
+  border: 10px solid white;
+  background-color: white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to top,
+    var(--lightBlueColor2),
+    var(--blueColor)
+  );
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 8px;
 }
 .contactWrap__link .CallIcon,
 .contactWrap__link .EmailIcon {
@@ -63,7 +70,7 @@
 @media screen and (min-width: 768px) {
   .contactsWrap {
     display: flex;
-    width: 580px;
+    width: 600px;
   }
   .contactsWrap__box {
     margin-bottom: 0;

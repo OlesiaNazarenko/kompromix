@@ -76,8 +76,8 @@
 
 .nav_list__sublist {
   position: relative;
-
-  font-size: 24px;
+  padding: 20px;
+  font-size: 20px;
   text-align: left;
   color: var(--textColor);
   -webkit-transition: all 0.25s ease;
@@ -87,7 +87,7 @@
   transition: all 0.25s ease;
 }
 .header__nav .nav_list__item .nav_list__sublist .sublist__item {
-  padding: 15px;
+  padding: 10px;
 }
 
 .header__nav .nav_list__item .nav_list__sublist li {
@@ -100,14 +100,13 @@
 .navSublist {
   position: fixed;
   width: 100%;
-  top: 170px;
+  top: 190px;
   left: 0;
   opacity: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--backgroundColor);
-  height: 200px;
   z-index: 5;
   visibility: hidden;
   border-bottom: 1px solid var(--perfectLightBlue);
@@ -128,19 +127,21 @@
   text-align: left;
   color: var(--textColor);
   font-size: 24px;
+  display: flex;
+  margin: 20px 0;
 }
 .navSublist__desc_icon {
-  font-size: 100px;
+  font-size: 150px;
   position: relative;
   left: -20px;
   color: var(--blueColor);
 }
 .navSublist__desc_text {
   display: inline-block;
-  padding: 10px;
-  width: 40px;
+  padding: 10px 0 10px 0;
   position: relative;
-  top: -15px;
+  top: -10px;
+  display: block;
 }
 .mobileMenu {
   position: fixed;
@@ -156,6 +157,31 @@
     var(--blueColor)
   );
   color: var(--backgroundColor);
+}
+.navSublist__desc_link {
+  text-transform: uppercase;
+  border: 1px solid var(--textColor);
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  font-weight: 600;
+  position: relative;
+  display: block;
+  width: fit-content;
+}
+.navSublist__desc_link:hover,
+.navSublist__desc_link:active {
+  border-color: var(--perfectLightBlue);
+  color: var(--perfectLightBlue);
+}
+.feedbackLink_desc {
+  position: relative;
+  top: -20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.navSublist__desc_wrap {
+  margin-top: 15px;
 }
 .mobileMenu__link {
   display: inline-block;
@@ -176,21 +202,18 @@
   .mobileMenu {
     display: none;
   }
-  .nav_list__sublist {
-    margin: -30px 0 0 40px;
-    font-size: 14px;
-  }
 }
 @media screen and (min-width: 1000px) {
   .nav_list__sublist {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
   }
-  .navSublist__desc {
-    font-size: 30px;
-  }
+
   .navSublist__desc_icon {
     top: 15px;
     font-size: 150px;
+  }
+  .navSublist {
+    top: 170px;
   }
 }

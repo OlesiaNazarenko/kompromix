@@ -1,62 +1,88 @@
 .mySwiper {
+  margin-top: -100px;
   height: auto;
-  width: 100%;
-  height: 370px;
-  text-align: center;
+  width: 99%;
+  padding: 0 10px;
+  height: 620px;
 }
 .slide {
   width: 100%;
+  height: 90%;
+  border: 10px solid white;
+  background-color: white;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top, var(--lightBlueColor2), white);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 8px;
 }
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  margin-bottom: 20px;
+.slide:hover,
+.slide:active {
+  border-image-source: linear-gradient(to top, var(--blueColor), white);
+  /* margin-top: 20px; */
+}
+.swiperTitle:hover,
+.swiperTitle:active {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  background-image: linear-gradient(to top, var(--blueColor), white);
+}
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
 .img {
+  display: block;
+  position: relative;
   width: 100%;
+  height: 50%;
 }
-
 .swiperTitle {
   position: relative;
   display: block;
-  width: 100%;
-
-  padding: 10px 0 10px 0;
-  background-color: var(--textColor);
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.5em;
+  background-image: linear-gradient(
+    to right,
+    var(--lightBlueColor),
+    var(--blueColor)
+  );
   font-size: 14px;
   color: var(--backgroundColor);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
+.imgBg {
+  filter: brightness(50%);
+}
+.slider__title {
+  position: absolute;
+  color: white;
+  margin-top: -85px;
+  padding: 10px;
+  font-weight: 600;
+}
+.slider__list {
+  position: relative;
+  margin: 5px 10px 40px 0;
+  padding: 10px 15px;
+}
+.slider__list li {
+  margin-top: 10px;
+  font-size: 12px;
+  font-style: italic;
+}
 @media screen and (min-width: 450px) {
   .mySwiper {
     width: 100%;
-    height: 440px;
+  }
+  .slider__title {
+    margin-top: -65px;
   }
   .swiperTitle {
-    width: 100%;
-    top: -35px;
     left: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .swiperTitle {
-    width: 100%;
-    top: -10px;
     left: 0;
   }
   .swiper-container {
@@ -65,17 +91,9 @@
   .slide {
     width: 40%;
   }
-  .mySwiper {
-    height: 370px;
-  }
 }
 @media screen and (min-width: 1000px) {
   .swiperTitle {
     height: auto;
-    top: -20px;
-  }
-  .mySwiper {
-    width: 1000px;
-    height: 370px;
   }
 }
