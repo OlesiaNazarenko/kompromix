@@ -13,7 +13,11 @@
   --textColor: #222831;
   --mainFont: "Montserrat", sans-serif;
 }
-
+.ourBenefitsSlider__img {
+  border: 1px solid red;
+  color: red;
+  fill: red !important;
+}
 html,
 body {
   position: relative;
@@ -40,8 +44,8 @@ ul {
 * {
   box-sizing: border-box;
 }
-.swiper-button-prev,
-.swiper-button-next {
+.services .swiper-button-prev,
+.services .swiper-button-next {
   display: none !important;
   position: absolute;
   width: 80px !important;
@@ -56,21 +60,24 @@ ul {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.swiper-button-next {
+.services .swiper-button-next {
   right: 10px !important;
 }
-.swiper-wrapper {
+.services .swiper-wrapper {
   margin-top: 125px !important;
   height: 80% !important;
 }
-.swiper-button-prev:hover,
-.swiper-button-prev:active,
-.swiper-button-next:hover,
-.swiper-button-next:active {
+.services .swiper-button-prev:hover,
+.services .swiper-button-prev:active,
+.services .swiper-button-next:hover,
+.services .swiper-button-next:active {
   color: var(--blueColor) !important;
 }
-.swiper-pagination-bullet-active-main {
+.services .swiper-pagination-bullet-active-main {
   background-color: var(--lightBlueColor) !important;
+}
+.services .swiper-pagination-bullet {
+  border-radius: 0;
 }
 .baseModalWrap .buttonGetTheCall {
   background-color: transparent;
@@ -145,8 +152,8 @@ input:focus {
   .qualitiesWrap {
     display: grid;
   }
-  .swiper-button-prev,
-  .swiper-button-next {
+  .services .swiper-button-prev,
+  .services .swiper-button-next {
     display: flex !important;
   }
 }
@@ -226,6 +233,45 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 10px;
   text-transform: uppercase;
   text-align: center;
+}
+.ourBenefits .swiper-wrapper {
+  height: 400px;
+  margin-top: 200px;
+}
+.ourBenefits .swiper-slide {
+  color: var(--backgroundColor);
+}
+.ourBenefits .swiper-button-prev,
+.ourBenefits .swiper-button-next {
+  position: absolute;
+  width: 80px !important;
+  height: 80px !important;
+  background-color: var(--backgroundColor);
+  color: var(--textColor) !important;
+  border-radius: 0%;
+  margin-top: 100px !important;
+  right: 200px !important;
+  top: 0 !important;
+  left: auto !important;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ourBenefits .swiper-button-prev:hover,
+.ourBenefits .swiper-button-prev:active,
+.ourBenefits .swiper-button-next:hover,
+.ourBenefits .swiper-button-next:active {
+  color: var(--blueColor) !important;
+}
+.ourBenefits .swiper-button-next {
+  right: 100px !important;
+}
+.ourBenefits .swiper-pagination-bullet {
+  height: 30px;
+  width: 30px;
+  font-size: 22px;
+  border-radius: 0;
+  color: var(--textColor);
+  background: var(--backgroundColor);
 }
 @media screen and (max-width: 767px) {
   .firstSection {

@@ -56,7 +56,10 @@
   width: 100%;
   justify-content: center;
 }
-
+.callBtn {
+  position: relative;
+  margin-top: 30px;
+}
 @media screen and (min-width: 768px) {
   .footer {
     padding: 0 0 40px 0;
@@ -84,6 +87,7 @@
     padding-left: 24px;
     text-align: left;
   }
+
   .linkBox__icon {
     font-size: 10px;
   }
