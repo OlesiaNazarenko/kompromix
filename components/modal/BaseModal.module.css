@@ -11,7 +11,7 @@
     var(--perfectLightBlue),
     var(--blueColor)
   );
-  margin: 0 auto;
+  margin: 20px auto;
   border: 0 solid #e5e7eb;
   border-radius: 0.5rem;
   color: var(--backgroundColor);

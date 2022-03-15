@@ -7,6 +7,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import styles from "../headerContacts/HeaderContacts.module.css";
 import classNames from "classnames";
+import BaseModal from "../modal/BaseModal";
 export default function Footer() {
   return (
     <footer className={s.footer}>
@@ -105,6 +106,9 @@ export default function Footer() {
           >
             <InstagramIcon className={s.linkBox__icon} /> Сторінка в Instagram
           </a>
+          <div className={s.callBtn}>
+            <BaseModal buttonName="Зворотній дзвінок" />
+          </div>
         </div>
       </div>
     </footer>
