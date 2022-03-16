@@ -45,7 +45,9 @@ ul {
   box-sizing: border-box;
 }
 .services .swiper-button-prev,
-.services .swiper-button-next {
+.services .swiper-button-next,
+.worksGallery .swiper-button-next,
+.worksGallery .swiper-button-prev {
   display: none !important;
   position: absolute;
   width: 80px !important;
@@ -60,23 +62,35 @@ ul {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.services .swiper-button-next {
+.services .swiper-button-next,
+.worksGallery .swiper-button-next {
   right: 10px !important;
 }
-.services .swiper-wrapper {
-  margin-top: 125px !important;
-  height: 80% !important;
+.worksGallery .swiper-button-next,
+.worksGallery .swiper-button-prev {
+  background-color: var(--textColor) !important;
+  color: var(--backgroundColor) !important;
 }
 .services .swiper-button-prev:hover,
 .services .swiper-button-prev:active,
 .services .swiper-button-next:hover,
-.services .swiper-button-next:active {
+.services .swiper-button-next:active,
+.worksGallery .swiper-button-next:active,
+.worksGallery .swiper-button-next:hover,
+.worksGallery .swiper-button-prev:active,
+.worksGallery .swiper-button-prev:hover {
   color: var(--blueColor) !important;
 }
-.services .swiper-pagination-bullet-active-main {
+.services .swiper-wrapper {
+  height: 80%;
+  margin-top: 130px;
+}
+.services .swiper-pagination-bullet-active-main,
+.worksGallery .swiper-pagination-bullet-active-main {
   background-color: var(--lightBlueColor) !important;
 }
-.services .swiper-pagination-bullet {
+.services .swiper-pagination-bullet,
+.worksGallery .swiper-pagination-bullet {
   border-radius: 0;
 }
 .baseModalWrap .buttonGetTheCall {
@@ -153,7 +167,9 @@ input:focus {
     display: grid;
   }
   .services .swiper-button-prev,
-  .services .swiper-button-next {
+  .services .swiper-button-next,
+  .worksGallery .swiper-button-next,
+  .worksGallery .swiper-button-prev {
     display: flex !important;
   }
 }
@@ -273,6 +289,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: var(--textColor);
   background: var(--backgroundColor);
 }
+
 @media screen and (max-width: 767px) {
   .firstSection {
     margin-top: 100px;

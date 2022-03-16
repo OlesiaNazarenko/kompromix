@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.2",
     "@zeit/next-css": "^1.0.1",
+    "basiclightbox": "^5.0.4",
     "classnames": "^2.3.1",
     "flat-carousel": "^0.0.1",
     "next": "12.1",
@@ -29,6 +30,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.3",
     "swiper": "^8.0.6"
   },
   "devDependencies": {

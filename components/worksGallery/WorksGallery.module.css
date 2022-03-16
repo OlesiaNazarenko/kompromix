@@ -1,0 +1,91 @@
+.img {
+  position: relative;
+  width: auto;
+  height: 200px;
+}
+.slide {
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+  margin-top: 100px;
+}
+.mySwiper {
+  position: relative;
+  margin-top: -105px;
+  height: 350px;
+  padding: 10px;
+}
+.worksGallery_descWrap {
+  position: relative;
+  margin-top: 50px;
+}
+.worksGallery__link {
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  width: fit-content;
+  text-transform: uppercase;
+}
+.worksGallery__link:hover {
+  color: var(--blueColor);
+}
+.worksGallery .worksGallery__icon {
+  font-size: 24px;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalImg {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  border: transparent;
+  outline: transparent;
+}
+.closeIcon {
+  position: fixed;
+  font-size: 40px;
+  padding: 5px;
+  right: 20px;
+  top: 20px;
+  color: var(--backgroundColor);
+  cursor: pointer;
+}
+.closeIcon:hover,
+.closeIcon:active {
+  color: var(--perfectLightBlue);
+}
+@media screen and (min-width: 350px) {
+  .worksGallery .worksGallery__icon {
+    font-size: 54px;
+  }
+  .worksGallery__link {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .worksGallery .worksGallery__icon {
+    font-size: 56px;
+  }
+  .modalImg {
+    width: 80%;
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .worksGallery .worksGallery__icon {
+    font-size: 110px;
+  }
+  .modalImg {
+    width: 80%;
+    height: 80vh;
+  }
+}
+.backDrop {
+  background: rgba(0, 0, 0, 0.8);
+}
