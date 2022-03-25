@@ -28,7 +28,6 @@ export default function OurBenefits({ slides }) {
         navigation={true}
         loop={true}
         speed={1800}
-        // parallax={true}
         effect={"fade"}
         fadeEffect={{
           crossFade: true,
