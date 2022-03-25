@@ -1,0 +1,148 @@
+.feedbackSection {
+  margin-top: -100px;
+}
+.swiperSlider {
+  position: relative;
+  display: block;
+  margin-top: 150px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.userIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  z-index: 10;
+  box-shadow: var(--smallShadow);
+}
+.beforeAfter {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 80%;
+  z-index: 10;
+  box-shadow: var(--smallShadow);
+}
+.textFeedback {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px 20px 30px;
+  height: 325px;
+}
+.textFeedback h4 {
+  margin: 0;
+}
+.textFeedback p {
+  margin-top: 40px;
+  font-style: italic;
+}
+.feedbackSection__constantBox {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+}
+.feedbackSection__constantBox_img {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  color: var(--textColor);
+}
+.feedbackSection_table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+.feedbackSection_table tr {
+  width: 100%;
+  padding: 4px 2px;
+}
+
+.feedbackSection_table td {
+  border-bottom: 1px dotted var(--textColor);
+  width: 50%;
+}
+.feedbackSection_table td:nth-child(even) {
+  text-align: right;
+  font-weight: 600;
+  font-size: 14px;
+}
+.tableIcon {
+  fill: var(--perfectLightBlue);
+}
+
+@media screen and (min-width: 350px) {
+  .feedbackSection__constantBox_img {
+    width: 54px;
+    height: 54px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .feedbackSection__constantBox_img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feedbackSection__constantBox_img {
+    width: 100px;
+    height: 100px;
+  }
+  .userIcon {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .swiperSlider {
+    position: relative;
+    display: flex;
+    margin-top: 150px;
+    height: 550px;
+  }
+  .userIcon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    top: -80px;
+    right: 40px;
+    box-shadow: var(--smallShadow);
+  }
+  .beforeAfter {
+    position: absolute;
+    width: 55%;
+    display: block;
+    height: 425px;
+    z-index: 10;
+    box-shadow: var(--smallShadow);
+  }
+  .textFeedback {
+    position: relative;
+    display: block;
+    box-shadow: var(--smallShadow);
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    padding: 20px 30px 20px 30px;
+    height: 325px;
+    background-color: white;
+  }
+}

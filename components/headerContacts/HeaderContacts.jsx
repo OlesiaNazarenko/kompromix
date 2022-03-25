@@ -27,7 +27,7 @@ export default function HeaderContacts() {
       </div>
       <div className={s.contactsSection_getTheCall}>
         <BaseModal buttonName="Зворотній дзвінок" />
-        <span>Щодня з 8:00 до 20:00</span>
+        <span>Щодня з 8:00 до 18:00</span>
       </div>
       <div className={s.contactsSection_contacts}>
         <p className={s.contactsSection_contacts__link}>

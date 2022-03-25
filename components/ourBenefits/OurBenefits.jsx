@@ -3,8 +3,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import classNames from "classnames";
+import "swiper/css/effect-fade";
 import s from "./OurBenefits.module.css";
-import { Pagination, Parallax, Autoplay, Navigation } from "swiper";
+import { Pagination, EffectFade, Autoplay, Navigation } from "swiper";
 import Image from "next/image";
 export default function OurBenefits({ slides }) {
   const textSlides = slides.filter((item) => {
@@ -27,13 +28,17 @@ export default function OurBenefits({ slides }) {
         navigation={true}
         loop={true}
         speed={1800}
-        parallax={true}
+        // parallax={true}
+        effect={"fade"}
+        fadeEffect={{
+          crossFade: true,
+        }}
         autoplay={{
           delay: 2800,
           disableOnInteraction: false,
         }}
         pagination={pagination}
-        modules={[Pagination, Navigation, Parallax, Autoplay]}
+        modules={[Pagination, Navigation, EffectFade, Autoplay]}
         className={s.ourBenefitsSlider}
       >
         <div

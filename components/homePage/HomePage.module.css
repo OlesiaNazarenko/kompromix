@@ -1,5 +1,10 @@
-.homePageWrap {
-  background: linear-gradient(to bottom, var(--lightBlueColor2) 30%, white 0%);
+.bg {
+  background: linear-gradient(to bottom, var(--lightBlueColor2) 70%, white 0%);
+}
+
+.feedbackSectionWrap {
+  padding: 20px 40px;
+  margin-bottom: 100px;
 }
 .ourBenefits {
   display: none;
@@ -7,6 +12,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .feedbackSectionWrap {
+    margin-bottom: 0px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .ourBenefits {

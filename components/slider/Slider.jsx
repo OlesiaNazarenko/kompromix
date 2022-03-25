@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import s from "./Slider.module.css";
 import { FreeMode, Pagination, Navigation } from "swiper";
 import Link from "next/link";
+
 export default function Slider({ data }) {
   return (
     <>
@@ -46,7 +47,6 @@ export default function Slider({ data }) {
                   className={s.imgBg}
                   src={item.image}
                   alt={item.title}
-                  role="presentation"
                   layout="fill"
                   priority={true}
                 />

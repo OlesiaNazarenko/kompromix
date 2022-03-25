@@ -12,12 +12,9 @@
   --greenColor: #687864;
   --textColor: #222831;
   --mainFont: "Montserrat", sans-serif;
+  --smallShadow: rgb(0 0 0 / 44%) 0px 3px 8px;
 }
-.ourBenefitsSlider__img {
-  border: 1px solid red;
-  color: red;
-  fill: red !important;
-}
+
 html,
 body {
   position: relative;
@@ -45,7 +42,11 @@ ul {
   box-sizing: border-box;
 }
 .services .swiper-button-prev,
-.services .swiper-button-next {
+.services .swiper-button-next,
+.worksGallery .swiper-button-next,
+.worksGallery .swiper-button-prev,
+.feedbackSection .swiper-button-next,
+.feedbackSection .swiper-button-prev {
   display: none !important;
   position: absolute;
   width: 80px !important;
@@ -60,23 +61,59 @@ ul {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.services .swiper-button-next {
+.feedbackSection .swiper-button-next,
+.feedbackSection .swiper-button-prev {
+  display: flex !important;
+  width: 60px !important;
+  height: 30px !important;
+  margin-top: auto !important;
+  bottom: -50px !important;
+}
+.feedbackSection .swiper-button-next::after,
+.feedbackSection .swiper-button-prev::after {
+  font-size: 20px;
+}
+.feedbackSection .swiper-button-prev {
+  left: 30px !important;
+}
+.feedbackSection .swiper-button-next {
+  right: 30px !important;
+}
+.services .swiper-button-next,
+.worksGallery .swiper-button-next {
   right: 10px !important;
 }
-.services .swiper-wrapper {
-  margin-top: 125px !important;
-  height: 80% !important;
+.worksGallery .swiper-button-next,
+.worksGallery .swiper-button-prev,
+.feedbackSection .swiper-button-next,
+.feedbackSection .swiper-button-prev {
+  background-color: var(--textColor) !important;
+  color: var(--backgroundColor) !important;
 }
 .services .swiper-button-prev:hover,
 .services .swiper-button-prev:active,
 .services .swiper-button-next:hover,
-.services .swiper-button-next:active {
+.services .swiper-button-next:active,
+.worksGallery .swiper-button-next:active,
+.worksGallery .swiper-button-next:hover,
+.worksGallery .swiper-button-prev:active,
+.worksGallery .swiper-button-prev:hover,
+.feedbackSection .swiper-button-next:hover,
+.feedbackSection .swiper-button-next:active,
+.feedbackSection .swiper-button-prev:hover,
+.feedbackSection .swiper-button-prev:active {
   color: var(--blueColor) !important;
 }
-.services .swiper-pagination-bullet-active-main {
+.services .swiper-wrapper {
+  height: 80%;
+  margin-top: 130px;
+}
+.services .swiper-pagination-bullet-active-main,
+.worksGallery .swiper-pagination-bullet-active-main {
   background-color: var(--lightBlueColor) !important;
 }
-.services .swiper-pagination-bullet {
+.services .swiper-pagination-bullet,
+.worksGallery .swiper-pagination-bullet {
   border-radius: 0;
 }
 .baseModalWrap .buttonGetTheCall {
@@ -141,6 +178,23 @@ input:focus {
     width: 700px;
   }
 
+  .feedbackSection .swiper-button-next,
+  .feedbackSection .swiper-button-prev {
+    position: absolute;
+    width: 80px !important;
+    height: 80px !important;
+    margin-top: 0 !important;
+    right: 100px !important;
+    top: 0 !important;
+    left: auto !important;
+  }
+  .feedbackSection .swiper-button-next::after,
+  .feedbackSection .swiper-button-prev::after {
+    font-size: var(--swiper-navigation-size);
+  }
+  .feedbackSection .swiper-button-next {
+    right: 10px !important;
+  }
   .qualitiesWrap {
     display: block;
   }
@@ -153,7 +207,11 @@ input:focus {
     display: grid;
   }
   .services .swiper-button-prev,
-  .services .swiper-button-next {
+  .services .swiper-button-next,
+  .worksGallery .swiper-button-next,
+  .worksGallery .swiper-button-prev,
+  .feedbackSection .swiper-button-next,
+  .feedbackSection .swiper-button-prev {
     display: flex !important;
   }
 }
@@ -273,6 +331,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: var(--textColor);
   background: var(--backgroundColor);
 }
+
 @media screen and (max-width: 767px) {
   .firstSection {
     margin-top: 100px;
