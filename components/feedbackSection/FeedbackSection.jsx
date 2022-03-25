@@ -8,6 +8,7 @@ import classNames from "classnames";
 import styles from "../servicesSlider/ServicesSlider.module.css";
 import s from "./FeedbackSection.module.css";
 import { EffectFlip, Autoplay, Navigation } from "swiper";
+import Link from "next/link";
 import Image from "next/image";
 import BeforeAfterSlider from "../beforeAfterSlider/BeforeAfterSlider";
 import PaidIcon from "@mui/icons-material/Paid";
@@ -123,6 +124,14 @@ export default function FeedbackSection() {
           );
         })}
       </Swiper>
+
+      <Link href={"/"}>
+        <a className={s.feedbackSection__link}>
+          {" "}
+          <RoofingIcon />
+          Дивитись усі об&#39;єкти
+        </a>
+      </Link>
     </>
   );
 }

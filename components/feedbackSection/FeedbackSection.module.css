@@ -78,8 +78,21 @@
   font-weight: 600;
   font-size: 14px;
 }
-.tableIcon {
+.textFeedback .tableIcon {
   fill: var(--perfectLightBlue);
+}
+.feedbackSection__link {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  z-index: 11;
+}
+.feedbackSection__link:hover,
+.feedbackSection__link:active {
+  color: var(--perfectLightBlue);
 }
 
 @media screen and (min-width: 350px) {
@@ -104,6 +117,9 @@
     width: 100px;
     height: 100px;
     top: -50px;
+  }
+  .feedbackSection__link {
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -144,5 +160,9 @@
     padding: 20px 30px 20px 30px;
     height: 325px;
     background-color: white;
+  }
+  .feedbackSection__link {
+    margin-top: -80px;
+    position: relative;
   }
 }
