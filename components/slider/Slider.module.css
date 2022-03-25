@@ -12,7 +12,7 @@
   background-color: white;
   border-image-slice: 1;
   border-image-source: linear-gradient(to top, var(--lightBlueColor2), white);
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 8px;
+  box-shadow: var(--smallShadow);
 }
 .slide:hover,
 .slide:active {

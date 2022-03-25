@@ -10,8 +10,8 @@ export default function Index() {
       <Head>
         <meta charSet="utf-8" />
         <title>
-          Kompromix - кровельные и жестяные работы. Продажа материалов для
-          кровли. Запорожье
+          Kompromix - покрівельні та жестяні роботи. Продаж матеріалів для
+          покрівлі. Запоріжжя
         </title>
         <meta
           name="keywords"

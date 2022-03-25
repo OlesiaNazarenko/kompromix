@@ -20,8 +20,6 @@ import Modal from "@mui/material/Modal";
 export default function WorksGallery() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = (e) => {
-    // console.log(e.target.attributes.src);
-    console.log(e.target.src);
     setModalImg(e.target.src);
     setOpen(true);
   };

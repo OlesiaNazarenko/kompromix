@@ -17,7 +17,6 @@
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.2",
     "@zeit/next-css": "^1.0.1",
-    "basiclightbox": "^5.0.4",
     "classnames": "^2.3.1",
     "flat-carousel": "^0.0.1",
     "next": "12.1",
@@ -26,6 +25,7 @@
     "react": "17.0.2",
     "react-burger-menu": "^3.0.6",
     "react-carousel-minimal": "^1.4.1",
+    "react-compare-slider": "^2.2.0",
     "react-dom": "17.0.2",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.28.1",
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.2.7",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "8.9.0",
     "eslint-config-next": "12.0.10",
     "react-alice-carousel": "^2.5.1"
