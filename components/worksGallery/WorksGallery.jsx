@@ -33,12 +33,7 @@ export default function WorksGallery() {
     const { images } = worksGallery;
     setImages(images);
   }, []);
-  const getImageForModal = (itemId) => {
-    const element = images.find(({ id }) => id === itemId);
-    console.log(element);
-    setModalImg(images.image);
-    console.log(modalImg);
-  };
+
   function ModalImg({ image }) {
     return (
       <Modal
@@ -55,7 +50,13 @@ export default function WorksGallery() {
       >
         <div className={s.modalImg}>
           <CloseIcon className={s.closeIcon} onClick={handleClose} />
-          <Image src={image} layout="fill" objectFit="cover" priority={true} />
+          <Image
+            src={image}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            priority={true}
+          />
         </div>
       </Modal>
     );

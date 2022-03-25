@@ -33,6 +33,7 @@ export default function FeedbackSection() {
         <div className={s.feedbackSection__constantBox_img}>
           <Image
             className={s.icon}
+            alt=""
             src={"/feedbacks/mainIcon.svg"}
             layout="responsive"
             width={"100%"}
@@ -53,9 +54,9 @@ export default function FeedbackSection() {
         modules={[Navigation, EffectFlip, Autoplay]}
         className={classNames(s.feedbackSection, "feedbackSection")}
       >
-        {slide.map((item) => {
+        {slide.map((item, index) => {
           return (
-            <SwiperSlide className={s.swiperSlider}>
+            <SwiperSlide key={index} className={s.swiperSlider}>
               <div className={s.beforeAfter}>
                 <BeforeAfterSlider
                   className={s.beforeAfter_slider}
@@ -81,6 +82,7 @@ export default function FeedbackSection() {
                       <LocationOnIcon
                         width={24}
                         height={24}
+                        alt=""
                         className={s.tableIcon}
                       />
                     </td>
