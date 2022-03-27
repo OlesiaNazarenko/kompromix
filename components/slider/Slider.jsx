@@ -1,4 +1,5 @@
 import "swiper/css";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import "swiper/css/free-mode";
@@ -7,8 +8,13 @@ import "swiper/css/pagination";
 import s from "./Slider.module.css";
 import { FreeMode, Pagination, Navigation } from "swiper";
 import Link from "next/link";
-
-export default function Slider({ data }) {
+import data from "../../json/ServicesSlider.json";
+export default function Slider() {
+  const [slide, setSlide] = useState([]);
+  useEffect(() => {
+    const { slides } = data;
+    setSlide(slides);
+  }, [slide]);
   return (
     <>
       <Swiper
@@ -39,7 +45,7 @@ export default function Slider({ data }) {
         modules={[FreeMode, Pagination, Navigation]}
         className={s.mySwiper}
       >
-        {data.map((item, index) => {
+        {slide.map((item, index) => {
           return (
             <SwiperSlide className={s.slide} key={index}>
               <div className={s.img}>
