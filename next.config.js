@@ -6,4 +6,5 @@ module.exports = {
     ],
     domains: ["localhost"],
   },
+  experimentalDecorators: true,
 };

@@ -5,6 +5,8 @@ import classNames from "classnames";
 import WorksGallery from "../worksGallery/WorksGallery";
 import ServicesSlider from "../servicesSlider/ServicesSlider";
 import FeedbackSection from "../feedbackSection/FeedbackSection";
+import GoogleMapSection from "../googleMapSection/GoogleMapSection.jsx";
+
 export default function HomePage() {
   const { slides } = data;
   return (
@@ -22,6 +24,7 @@ export default function HomePage() {
         <div className={classNames("container", s.feedbackSectionWrap)}>
           <FeedbackSection />
         </div>
+        <GoogleMapSection />
       </section>
     </>
   );

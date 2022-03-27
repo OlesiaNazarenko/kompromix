@@ -14,7 +14,7 @@ import BeforeAfterSlider from "../beforeAfterSlider/BeforeAfterSlider";
 import PaidIcon from "@mui/icons-material/Paid";
 import RoofingIcon from "@mui/icons-material/Roofing";
 import textFeedback from "../../json/textFeedback.json";
-import SquareFootIcon from "@mui/icons-material/SquareFoot";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 export default function FeedbackSection() {
   const [slide, setSlide] = useState([]);
@@ -68,47 +68,49 @@ export default function FeedbackSection() {
                 <h4>{item.userName}</h4>
                 <p>{item.textFeedback}</p>
                 <table className={s.feedbackSection_table}>
-                  <tr className={s.tableRow}>
-                    <td>
-                      <RoofingIcon
-                        width={24}
-                        height={24}
-                        className={s.tableIcon}
-                      />
-                    </td>
-                    <td>{item.service}</td>
-                  </tr>
-                  <tr className={s.tableRow}>
-                    <td>
-                      <LocationOnIcon
-                        width={24}
-                        height={24}
-                        alt=""
-                        className={s.tableIcon}
-                      />
-                    </td>
-                    <td>{item.location}</td>
-                  </tr>
-                  <tr className={s.tableRow}>
-                    <td>
-                      <SquareFootIcon
-                        width={24}
-                        height={24}
-                        className={s.tableIcon}
-                      />
-                    </td>
-                    <td>{item.square}m&#178;</td>
-                  </tr>
-                  <tr className={s.tableRow}>
-                    <td>
-                      <PaidIcon
-                        width={24}
-                        height={24}
-                        className={s.tableIcon}
-                      />
-                    </td>
-                    <td>{item.payment}</td>
-                  </tr>
+                  <tbody>
+                    <tr className={s.tableRow}>
+                      <td>
+                        <RoofingIcon
+                          width={24}
+                          height={24}
+                          className={s.tableIcon}
+                        />
+                      </td>
+                      <td>{item.service}</td>
+                    </tr>
+                    <tr className={s.tableRow}>
+                      <td>
+                        <LocationOnIcon
+                          width={24}
+                          height={24}
+                          alt=""
+                          className={s.tableIcon}
+                        />
+                      </td>
+                      <td>{item.location}</td>
+                    </tr>
+                    <tr className={s.tableRow}>
+                      <td>
+                        <DesignServicesIcon
+                          width={24}
+                          height={24}
+                          className={s.tableIcon}
+                        />
+                      </td>
+                      <td>{item.square}m&#178;</td>
+                    </tr>
+                    <tr className={s.tableRow}>
+                      <td>
+                        <PaidIcon
+                          width={24}
+                          height={24}
+                          className={s.tableIcon}
+                        />
+                      </td>
+                      <td>{item.payment}</td>
+                    </tr>
+                  </tbody>
                 </table>
                 <div className={s.userIcon}>
                   <Image

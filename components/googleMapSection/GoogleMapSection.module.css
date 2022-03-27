@@ -1,0 +1,67 @@
+.map {
+  position: relative;
+  width: 99vw;
+  margin: 0 auto;
+  height: 80vh;
+}
+.infoWindow {
+  width: 220px;
+  display: block;
+  padding: 5px;
+  font-weight: 600;
+}
+.infoWindow__servicesList {
+  margin: 10px 0;
+}
+.infoWindow__detailsList {
+  text-align: center;
+  font-weight: 400;
+}
+.infoWindow__icon {
+  /* color: var(--textColor); */
+  font-size: 18px;
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.infoWindow__link {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px 20px;
+  color: var(--textColor);
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.infoWindow__link:hover {
+  color: var(--perfectLightBlue);
+  fill: var(--perfectLightBlue);
+}
+.infoWindow__nextLink {
+  text-decoration: none;
+}
+.googleMapSection__icon {
+  font-size: 110px;
+}
+.GoogleMapSection {
+  margin: 20px 0;
+  padding: 20px 0 60px 0;
+  background-color: white;
+}
+.GoogleMapSection__textBox {
+  padding: 20px 40px;
+}
+
+@media screen and (min-width: 350px) {
+  .GoogleMapSection .googleMapSection__icon {
+    font-size: 54px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .GoogleMapSection .googleMapSection__icon {
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .GoogleMapSection .googleMapSection__icon {
+    font-size: 100px;
+  }
+}
