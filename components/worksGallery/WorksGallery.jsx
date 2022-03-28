@@ -29,6 +29,7 @@ export default function WorksGallery() {
   };
   const [images, setImages] = useState([]);
   const [modalImg, setModalImg] = useState("");
+
   useEffect(() => {
     const { images } = worksGallery;
     setImages(images);
