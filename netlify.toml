@@ -4,3 +4,6 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_IMAGE_ALLOWED_DOMAINS = "randomuser.me"
