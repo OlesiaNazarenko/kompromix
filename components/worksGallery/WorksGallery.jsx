@@ -16,6 +16,8 @@ import { FreeMode, Pagination, Navigation } from "swiper";
 import Link from "next/link";
 import worksGallery from "../../json/worksGallery.json";
 import Modal from "@mui/material/Modal";
+import db from "../../db/db";
+import { collection, getDocs } from "firebase/firestore";
 
 export default function WorksGallery() {
   const [open, setOpen] = React.useState(false);
@@ -29,10 +31,17 @@ export default function WorksGallery() {
   };
   const [images, setImages] = useState([]);
   const [modalImg, setModalImg] = useState("");
+  const getData = async () => {
+    let imgArr = [];
+    const querySnapshot = await getDocs(collection(db, "worksGalleryImages"));
+    querySnapshot.forEach((doc) => {
+      imgArr = doc.data().image;
+    });
+    return setImages(imgArr);
+  };
 
   useEffect(() => {
-    const { images } = worksGallery;
-    setImages(images);
+    getData();
   }, []);
 
   function ModalImg({ image }) {
@@ -116,7 +125,7 @@ export default function WorksGallery() {
                   <Image
                     onClick={handleOpen}
                     className={s.imgBg}
-                    src={item.image}
+                    src={item}
                     alt=""
                     role="presentation"
                     layout="fill"
