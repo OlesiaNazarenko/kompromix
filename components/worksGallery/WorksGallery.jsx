@@ -14,21 +14,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import RoofingIcon from "@mui/icons-material/Roofing";
 import { FreeMode, Pagination, Navigation } from "swiper";
 import Link from "next/link";
-import worksGallery from "../../json/worksGallery.json";
+
 import Modal from "@mui/material/Modal";
 import db from "../../db/db";
 import { collection, getDocs } from "firebase/firestore";
 
 export default function WorksGallery() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = (e) => {
-    setModalImg(e.target.src);
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-    setModalImg("");
-  };
   const [images, setImages] = useState([]);
   const [modalImg, setModalImg] = useState("");
   const getData = async () => {
@@ -44,7 +36,24 @@ export default function WorksGallery() {
     getData();
   }, []);
 
-  function ModalImg({ image }) {
+  const handleOpen = (e) => {
+    let imgSrc = "";
+    images.forEach((item, index) => {
+      if (index == e.target.id) {
+        imgSrc = item;
+      }
+      setModalImg(imgSrc);
+    });
+    console.log(e);
+    setOpen(true);
+  };
+  console.log(modalImg);
+  const handleClose = () => {
+    setOpen(false);
+    setModalImg("");
+  };
+
+  function ModalImg() {
     return (
       <Modal
         BackdropProps={{
@@ -61,7 +70,7 @@ export default function WorksGallery() {
         <div className={s.modalImg}>
           <CloseIcon className={s.closeIcon} onClick={handleClose} />
           <Image
-            src={image}
+            src={modalImg}
             alt=""
             layout="fill"
             objectFit="cover"
@@ -123,6 +132,7 @@ export default function WorksGallery() {
               <SwiperSlide className={s.slide} key={index}>
                 <div className={s.img}>
                   <Image
+                    id={index}
                     onClick={handleOpen}
                     className={s.imgBg}
                     src={item}
@@ -136,7 +146,7 @@ export default function WorksGallery() {
               </SwiperSlide>
             );
           })}
-          <ModalImg image={modalImg} />
+          <ModalImg />
         </Swiper>
 
         <Link href={"/"}>
