@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCf8zFgjVj1nvttoR-d556JPe69c0SL3fE",
-  authDomain: "kompromix.firebaseapp.com",
-  projectId: "kompromix",
-  storageBucket: "kompromix.appspot.com",
-  messagingSenderId: "601626901306",
-  appId: "1:601626901306:web:02140dc051631b8453ae03",
-  measurementId: "G-9F0G8KT09F",
+  apiKey: process.env.FIREBASE_DB_API_KEY,
+  authDomain: process.env.FIREBASE_DB_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_DB_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_DB_STORAGE_BASKET,
+  messagingSenderId: process.env.FIREBASE_DB_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_DB_APP_ID,
+  measurementId: process.env.FIREBASE_DB_MEASUREMENT_ID,
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

@@ -45,7 +45,7 @@ export default function GoogleMapSection() {
     }
     setActiveMarker(marker);
   };
-
+  console.log(NEXT_PUBLIC_GOOGLEMAPS_API_KEY);
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: NEXT_PUBLIC_GOOGLEMAPS_API_KEY,

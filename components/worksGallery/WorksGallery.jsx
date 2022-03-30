@@ -44,10 +44,8 @@ export default function WorksGallery() {
       }
       setModalImg(imgSrc);
     });
-    console.log(e);
     setOpen(true);
   };
-  console.log(modalImg);
   const handleClose = () => {
     setOpen(false);
     setModalImg("");
