@@ -47,7 +47,7 @@ export default function GoogleMapSection() {
   };
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: GOOGLEMAPS_API_KEY,
+    googleMapsApiKey: NEXT_PUBLIC_GOOGLEMAPS_API_KEY,
     libraries: libraries,
   });
   const mapRef = React.useRef(undefined);
