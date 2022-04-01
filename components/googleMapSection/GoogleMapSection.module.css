@@ -39,7 +39,7 @@
   text-decoration: none;
 }
 .googleMapSection__icon {
-  font-size: 110px;
+  font-size: 28px;
 }
 .GoogleMapSection {
   margin: 20px 0;
@@ -49,10 +49,23 @@
 .GoogleMapSection__textBox {
   padding: 20px 40px;
 }
-
+.googleMapSection__link {
+  /* margin-top: 20px; */
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+  width: fit-content;
+  text-transform: uppercase;
+}
 @media screen and (min-width: 350px) {
   .GoogleMapSection .googleMapSection__icon {
     font-size: 54px;
+  }
+  .googleMapSection__link {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 450px) {

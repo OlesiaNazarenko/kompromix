@@ -1,7 +1,7 @@
 import { Link } from "@mui/material";
 import Image from "next/image";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
 import s from "./GoogleMapSection.module.css";
+
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 export default function InfoWindowContent({ data }) {
   return (
@@ -15,8 +15,6 @@ export default function InfoWindowContent({ data }) {
       <Link href="/" className={s.infoWindow__nextLink}>
         <a className={s.infoWindow__link}>
           <ReadMoreIcon />
-          {/* <TouchAppIcon className={s.infoWindow__icon} />
-          Подробиці */}
         </a>
       </Link>
       <ul className={s.infoWindow__detailsList}>

@@ -8,10 +8,13 @@ export default function BeforeAfterSlider({ imgAfter, imgBefore }) {
     <ReactCompareSlider
       style={{ width: "100%", height: "100%" }}
       itemOne={
-        <ReactCompareSliderImage src={imgBefore.url} alt={imgBefore.alt} />
+        <ReactCompareSliderImage src={imgBefore} alt="До початку робіт" />
       }
       itemTwo={
-        <ReactCompareSliderImage src={imgAfter.url} alt={imgAfter.alt} />
+        <ReactCompareSliderImage
+          src={imgAfter}
+          alt="Після виконання нашої роботи"
+        />
       }
     />
   );

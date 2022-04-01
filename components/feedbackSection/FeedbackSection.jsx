@@ -13,16 +13,24 @@ import Image from "next/image";
 import BeforeAfterSlider from "../beforeAfterSlider/BeforeAfterSlider";
 import PaidIcon from "@mui/icons-material/Paid";
 import RoofingIcon from "@mui/icons-material/Roofing";
-import textFeedback from "../../json/textFeedback.json";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import db from "../../db/db";
+import { collection, getDocs } from "firebase/firestore";
 export default function FeedbackSection() {
   const [slide, setSlide] = useState([]);
-  useEffect(() => {
-    const { slides } = textFeedback;
-    setSlide(slides);
-  }, [slide]);
+  const getData = async () => {
+    let slides = [];
+    const querySnapshot = await getDocs(collection(db, "textFeedbacks"));
+    querySnapshot.forEach((doc) => {
+      slides = doc.data().slides;
+    });
+    return setSlide(slides);
+  };
 
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <div

@@ -1,5 +1,4 @@
 import s from "./HomePage.module.css";
-import data from "../../json/ourBenefits.json";
 import OurBenefits from "../ourBenefits/OurBenefits";
 import classNames from "classnames";
 import WorksGallery from "../worksGallery/WorksGallery";
@@ -8,7 +7,6 @@ import FeedbackSection from "../feedbackSection/FeedbackSection";
 import GoogleMapSection from "../googleMapSection/GoogleMapSection.jsx";
 
 export default function HomePage() {
-  const { slides } = data;
   return (
     <>
       <section className={s.homePageWrap}>
@@ -18,9 +16,12 @@ export default function HomePage() {
           </div>
         </div>
         <div className={classNames(s.ourBenefits, "ourBenefits")}>
-          <OurBenefits slides={slides} />
+          <OurBenefits />
         </div>
-        <WorksGallery />
+        <div className={s.WorksGallery}>
+          <WorksGallery />
+        </div>
+
         <div className={classNames("container", s.feedbackSectionWrap)}>
           <FeedbackSection />
         </div>

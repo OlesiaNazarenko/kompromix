@@ -14,7 +14,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import RoofingIcon from "@mui/icons-material/Roofing";
 import { FreeMode, Pagination, Navigation } from "swiper";
 import Link from "next/link";
-
 import Modal from "@mui/material/Modal";
 import db from "../../db/db";
 import { collection, getDocs } from "firebase/firestore";

@@ -4,7 +4,7 @@
 .swiperSlider {
   position: relative;
   display: block;
-  margin-top: 150px;
+  margin-top: 120px;
 }
 .swiper-slide img {
   display: block;
@@ -51,11 +51,13 @@
   position: relative;
   margin-top: 50px;
   display: flex;
+  padding: 0 45px;
 }
 .feedbackSection__constantBox_img {
   display: inline;
   width: 24px;
   height: 24px;
+
   color: var(--textColor);
 }
 .feedbackSection_table {
@@ -86,7 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 12px;
   text-transform: uppercase;
   z-index: 11;
 }
@@ -99,6 +101,9 @@
   .feedbackSection__constantBox_img {
     width: 54px;
     height: 54px;
+  }
+  .feedbackSection__link {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 450px) {

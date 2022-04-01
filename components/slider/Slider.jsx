@@ -8,13 +8,22 @@ import "swiper/css/pagination";
 import s from "./Slider.module.css";
 import { FreeMode, Pagination, Navigation } from "swiper";
 import Link from "next/link";
-import data from "../../json/ServicesSlider.json";
+import db from "../../db/db";
+import { collection, getDocs } from "firebase/firestore";
 export default function Slider() {
   const [slide, setSlide] = useState([]);
+  const getData = async () => {
+    let slides = [];
+    const querySnapshot = await getDocs(collection(db, "servicesSlider"));
+    querySnapshot.forEach((doc) => {
+      slides = doc.data().slides;
+    });
+    return setSlide(slides);
+  };
+
   useEffect(() => {
-    const { slides } = data;
-    setSlide(slides);
-  }, [slide]);
+    getData();
+  }, []);
   return (
     <>
       <Swiper
@@ -27,7 +36,7 @@ export default function Slider() {
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 15,
+            spaceBetween: 30,
           },
           1000: {
             slidesPerView: 3,

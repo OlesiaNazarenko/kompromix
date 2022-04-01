@@ -6,15 +6,16 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import Image from "next/image";
 import InfoWindowContent from "./InfoWindowContent.jsx";
 import s from "./GoogleMapSection.module.css";
-const { NEXT_PUBLIC_GOOGLEMAPS_API_KEY } = process.env;
-import mapsMarks from "../../json/mapsMarks.json";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import styles from "../servicesSlider/ServicesSlider.module.css";
 import classNames from "classnames";
-
+import db from "../../db/db";
+import Link from "next/link";
+import RoofingIcon from "@mui/icons-material/Roofing";
+import { collection, getDocs } from "firebase/firestore";
+const { NEXT_PUBLIC_GOOGLEMAPS_API_KEY } = process.env;
 const center = {
   lat: 47.82520468811773,
   lng: 35.16212068247291,
@@ -35,10 +36,17 @@ const defaultOptions = {
 export default function GoogleMapSection() {
   const [activeMarker, setActiveMarker] = useState(null);
   const [markers, setMarkers] = useState();
+  const getData = async () => {
+    let markersData = [];
+    const querySnapshot = await getDocs(collection(db, "mapMarks"));
+    querySnapshot.forEach((doc) => {
+      markersData = doc.data().marks;
+    });
+    return setMarkers(markersData);
+  };
   useEffect(() => {
-    const { marks } = mapsMarks;
-    setMarkers(marks);
-  }, [markers]);
+    getData();
+  }, []);
   const handleActiveMarker = (marker) => {
     if (marker === activeMarker) {
       return;
@@ -54,7 +62,6 @@ export default function GoogleMapSection() {
   const onLoad = React.useCallback(function callback(map) {
     mapRef.current = map;
   }, []);
-
   const onUnmount = React.useCallback(function callback(map) {
     mapRef.current = undefined;
   }, []);
@@ -91,7 +98,10 @@ export default function GoogleMapSection() {
                 return (
                   <Marker
                     key={index}
-                    position={{ lat: item.lat, lng: item.lng }}
+                    position={{
+                      lat: item.geopoint._lat,
+                      lng: item.geopoint._long,
+                    }}
                     onClick={() => handleActiveMarker(index)}
                   >
                     {activeMarker === index ? (
@@ -108,6 +118,12 @@ export default function GoogleMapSection() {
           </GoogleMap>
         </div>
       )}
+      <Link href={"/"}>
+        <a className={s.googleMapSection__link}>
+          <RoofingIcon />
+          Дивитись усі об&#39;єкти
+        </a>
+      </Link>
     </section>
   );
 }

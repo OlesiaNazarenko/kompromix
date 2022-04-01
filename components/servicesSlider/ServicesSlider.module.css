@@ -1,9 +1,9 @@
 .services {
-  padding: 20px 40px;
-  /* background-color: rgb(255, 255, 255); */
+  padding: 40px 40px;
 }
 .services__descWrap {
   display: flex;
+  padding-left: 45px;
 }
 .textWrap__title {
   font-size: 24px;
@@ -29,6 +29,9 @@
 @media screen and (min-width: 450px) {
   .textWrap__desc {
     font-size: 14px;
+  }
+  .services {
+    padding: 40px 0px;
   }
   .services .services__icon {
     font-size: 56px;
