@@ -1,0 +1,75 @@
+.FeedbackPageNavSection {
+  padding: 40px 10;
+}
+.tabs {
+  margin-top: 20px;
+  font-family: var(--mainFont);
+}
+.tabItem {
+  padding: 0;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.tabItem p {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.tabsTitleBox {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px solid var(--whiteColor);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to top,
+    var(--lightBlueColor2),
+    var(--blueColor)
+  );
+  box-shadow: rgb(0 0 0 / 45%) 0px 2px 8px;
+}
+.tabsTitleText {
+  font-size: 0.7em;
+  margin: 0;
+}
+.tabsTitleText {
+  font-weight: 600;
+}
+@media screen and (min-width: 450px) {
+  .tabsTitleBox {
+    border-width: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .FeedbackPageNavSection {
+    padding: 40px 0;
+  }
+  .tabsTitleIcon svg {
+    font-size: 4em;
+  }
+
+  .tabsTitleBox {
+    border-width: 15px;
+    height: 180px;
+  }
+  .tabsTitleText {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .FeedbackPageNavSection {
+    padding: 40px 0;
+  }
+  .tabsTitleBox {
+    padding: 80px 20px;
+    height: auto;
+  }
+  .tabsTitleIcon svg {
+    font-size: 5em;
+  }
+  .tabsTitleText {
+    font-size: 1.5em;
+  }
+}

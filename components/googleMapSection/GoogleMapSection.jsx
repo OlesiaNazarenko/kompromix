@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { useEffect, useState } from "react";
 import {
   GoogleMap,
@@ -9,12 +8,10 @@ import {
 import InfoWindowContent from "./InfoWindowContent.jsx";
 import s from "./GoogleMapSection.module.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import styles from "../servicesSlider/ServicesSlider.module.css";
-import classNames from "classnames";
-import db from "../../db/db";
 import Link from "next/link";
 import RoofingIcon from "@mui/icons-material/Roofing";
-import { collection, getDocs } from "firebase/firestore";
+import SectionTitleComponent from "../sectionTitleComponent/SectionTitleComponent.jsx";
+
 const { NEXT_PUBLIC_GOOGLEMAPS_API_KEY } = process.env;
 const center = {
   lat: 47.82520468811773,
@@ -33,20 +30,8 @@ const defaultOptions = {
   scrollwheel: false,
   fullscreenControl: false,
 };
-export default function GoogleMapSection() {
+export default function GoogleMapSection({ props }) {
   const [activeMarker, setActiveMarker] = useState(null);
-  const [markers, setMarkers] = useState();
-  const getData = async () => {
-    let markersData = [];
-    const querySnapshot = await getDocs(collection(db, "mapMarks"));
-    querySnapshot.forEach((doc) => {
-      markersData = doc.data().marks;
-    });
-    return setMarkers(markersData);
-  };
-  useEffect(() => {
-    getData();
-  }, []);
   const handleActiveMarker = (marker) => {
     if (marker === activeMarker) {
       return;
@@ -66,21 +51,13 @@ export default function GoogleMapSection() {
     mapRef.current = undefined;
   }, []);
   return (
-    <section className={s.GoogleMapSection}>
-      <div
-        className={classNames(
-          "container",
-          styles.services__descWrap,
-          s.GoogleMapSection__textBox
-        )}
-      >
-        <div className={s.googleMapSection__constantBox_img}>
-          <LocationOnIcon className={s.googleMapSection__icon} alt="" />
-        </div>
-        <div className={styles.services__textWrap}>
-          <h1 className={styles.textWrap__title}>Географія робіт</h1>
-          <p className={styles.textWrap__desc}>Ми працюємо по всій країні</p>
-        </div>
+    <section className={s.GoogleMapSection} id="GoogleMapSection">
+      <div className="container">
+        <SectionTitleComponent
+          title={"Географія робіт"}
+          subTitle={"Ми працюємо по всій країні"}
+          icon={<LocationOnIcon />}
+        />
       </div>
       {isLoaded && (
         <div className={s.map}>
@@ -93,14 +70,14 @@ export default function GoogleMapSection() {
             options={defaultOptions}
             onClick={() => setActiveMarker(null)}
           >
-            {markers &&
-              markers.map((item, index) => {
+            {props &&
+              props.map((item, index) => {
                 return (
                   <Marker
                     key={index}
                     position={{
-                      lat: item.geopoint._lat,
-                      lng: item.geopoint._long,
+                      lat: item.geopoint.lat,
+                      lng: item.geopoint.lon,
                     }}
                     onClick={() => handleActiveMarker(index)}
                   >

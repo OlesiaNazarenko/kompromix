@@ -1,13 +1,13 @@
 import s from "./Footer.module.css";
 import Image from "next/image";
-import Logo from "../../public/logo.jpg";
+import Logo from "../../public/logo2.png";
 import Link from "next/link";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import styles from "../headerContacts/HeaderContacts.module.css";
 import classNames from "classnames";
-import BaseModal from "../modal/BaseModal";
+import BaseModal from "../baseModal/BaseModal";
 export default function Footer() {
   return (
     <footer className={s.footer}>
@@ -19,13 +19,13 @@ export default function Footer() {
           )}
         >
           <Link href={"/"}>
-            <a className={styles.header__nav_logo}>
+            <a className={[styles.header__nav_logo, s.logo]}>
               <Image
                 src={Logo}
-                alt="Кровельное ателье 'Komprimix'"
+                alt="Кровельное ателье 'Kompromix'"
                 role="presentation"
-                width={120}
-                height={100}
+                width={170}
+                height={110}
               />
             </a>
           </Link>

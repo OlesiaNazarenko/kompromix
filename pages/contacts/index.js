@@ -2,26 +2,37 @@ import Header from "../../components/header/Header";
 import Head from "next/head";
 import Footer from "../../components/footer/Footer";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import classNames from "classnames";
+import Link from "next/link";
 import s from "./Contacts.module.css";
+import SectionTitleComponent from "../../components/sectionTitleComponent/SectionTitleComponent";
+
 export default function Contacts() {
   return (
     <>
       <Head>
-        <title>Kompromix.Контакты</title>
+        <title>Kompromix. Контакти</title>
       </Head>
       <Header />
-      <section className={classNames("container", "firstSection")}>
-        <div className={s.titleBox}>
-          <ConnectWithoutContactIcon className={s.contactsIcon} />
-          <div className={s.titleBox__textBox}>
-            <h1>Контакти</h1>
-            <p>Як з нами зв&#39;язатися?</p>
-          </div>
+      <section className={classNames("container", s.contactsSection)}>
+        <div className="linksFlowWrap">
+          <Link href={"/"}>
+            <a>Головна</a>
+          </Link>
+          <ArrowForwardIosIcon className="linksFlowArrow" />
+          <Link href={"/contacts"}>
+            <a>Контакти</a>
+          </Link>
         </div>
+        <SectionTitleComponent
+          title={"Контакти"}
+          subTitle={"Як з нами зв'язатися?"}
+          icon={<ConnectWithoutContactIcon />}
+        />
         <div className={s.contactsWrap}>
           <div className={s.contactsWrap__box}>
             <p>

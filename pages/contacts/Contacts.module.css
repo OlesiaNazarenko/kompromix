@@ -1,3 +1,7 @@
+.contactsSection {
+  margin-top: 40px;
+  padding: 40px 10px 100px 10px;
+}
 .titleBox .contactsIcon {
   font-size: 90px;
   color: var(--blueColor);
@@ -16,6 +20,7 @@
   display: block;
   justify-content: space-between;
   color: var(--textColor);
+  font-size: 10px;
 }
 .contactWrap__link {
   margin-bottom: 15px;
@@ -40,8 +45,10 @@
 .contactWrap__link .CallIcon,
 .contactWrap__link .EmailIcon {
   position: relative;
-  top: 5px;
-  right: 3px;
+  top: 3px;
+  font-size: 14px;
+  /* top: 5px;
+  right: 3px; */
 }
 .InstLink {
   color: var(--blueColor);
@@ -54,7 +61,7 @@
   position: relative;
   top: 5px;
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .contactsWrap {
     font-size: 10px;
     width: 90%;
@@ -65,8 +72,12 @@
     top: 3px;
     font-size: 14px;
   }
+} */
+@media screen and (min-width: 450px) {
+  .contactsWrap {
+    font-size: 14px;
+  }
 }
-
 @media screen and (min-width: 768px) {
   .contactsWrap {
     display: flex;
@@ -74,5 +85,9 @@
   }
   .contactsWrap__box {
     margin-bottom: 0;
+  }
+  .contactsSection {
+    margin-top: 0;
+    padding: 40px 40px 100px 40px;
   }
 }

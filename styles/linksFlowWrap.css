@@ -1,0 +1,16 @@
+.linksFlowWrap {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+.linksFlowWrap a {
+  padding: 0 5px;
+}
+.linksFlowWrap a:hover,
+.linksFlowWrap a:focus {
+  color: var(--perfectLightBlue);
+}
+.linksFlowWrap .linksFlowArrow {
+  font-size: 0.7em;
+}

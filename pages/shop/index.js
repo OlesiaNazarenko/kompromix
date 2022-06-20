@@ -1,6 +1,6 @@
 import Header from "../../components/header/Header";
 import Head from "next/head";
-import BaseModal from "../../components/modal/BaseModal";
+import BaseModal from "../../components/baseModal/BaseModal";
 import Footer from "../../components/footer/Footer";
 export default function Shop() {
   return (

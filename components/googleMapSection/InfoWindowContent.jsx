@@ -17,25 +17,16 @@ export default function InfoWindowContent({ data }) {
           <ReadMoreIcon />
         </a>
       </Link>
-      <ul className={s.infoWindow__detailsList}>
-        {data.details &&
-          data.details.map((item, index) => {
-            return (
-              <>
-                {item.year && (
-                  <li key={index}>
-                    <i>Рік:</i> <span>{item.year}</span>
-                  </li>
-                )}
-                {item.period && (
-                  <li key={index}>
-                    <i>Термін виконання:</i> <span>{item.period}</span>
-                  </li>
-                )}
-              </>
-            );
-          })}
-      </ul>
+      {data.details && (
+        <ul className={s.infoWindow__detailsList}>
+          <li>
+            <i>Рік:</i> <span>{data.details.year}</span>
+          </li>
+          <li>
+            <i>Термін виконання:</i> <span>{data.details.period}</span>
+          </li>
+        </ul>
+      )}
     </acticle>
   );
 }

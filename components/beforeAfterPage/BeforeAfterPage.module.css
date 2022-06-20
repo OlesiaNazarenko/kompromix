@@ -1,0 +1,27 @@
+.beforeAfterPageSection {
+  padding: 40px 10px;
+}
+.feedbacksList {
+  position: relative;
+  margin-top: 40px;
+}
+.feedbacksItem {
+  padding-bottom: 40px;
+  margin-bottom: 130px;
+}
+@media screen and (max-width: 999px) {
+  .feedbacksList .feedbacksItem:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .beforeAfterPageSection {
+    padding: 40px 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .feedbacksList {
+    margin-top: -40px;
+  }
+}
