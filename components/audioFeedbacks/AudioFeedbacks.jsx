@@ -18,12 +18,12 @@ export default function AudioFeedbacks() {
         return (
           <div className={s.audioFeedback} key={index}>
             <div className={s.imageWrap}>
-              <Image src="/userIcon.jpg" layout="fill" />
+              <Image src="/userIcon.jpg" layout="fill" alt="" />
             </div>
             <div className={s.contentWrap}>
               <p>{item.date}</p>
               <p>
-                Оцінка компанії: <Rating readOnly value={item.rate} />
+                Оцінка компанії&#58; <Rating readOnly value={item.rate} />
               </p>
               <audio controls>
                 <source src={item.path} type="audio/ogg" />

@@ -40,7 +40,7 @@ export default function ProjectTemplate() {
           </Link>
           <ArrowForwardIosIcon className="linksFlowArrow" />
           <Link href={"/projects"}>
-            <a>Об'єкти</a>
+            <a>Об&#39;єкти</a>
           </Link>
           <ArrowForwardIosIcon className="linksFlowArrow" />
           <Link href={""}>
@@ -51,12 +51,12 @@ export default function ProjectTemplate() {
           <Link href={`/projects/project/${Number(query.id) - 1}`}>
             <a className={s.linksWrapLink}>
               <ArrowBackIosIcon className={s.linksArrow} />
-              Попередній об'єкт
+              Попередній об&#39;єкт
             </a>
           </Link>
           <Link href={`/projects/project/${Number(query.id) + 1}`}>
             <a className={s.linksWrapLink}>
-              Наступний об'єкт
+              Наступний об&#39;єкт
               <ArrowForwardIosIcon className={s.linksArrow} />
             </a>
           </Link>
@@ -69,20 +69,21 @@ export default function ProjectTemplate() {
                 src={currentProject.img}
                 layout="fill"
                 onClick={handleOpen}
+                alt=""
               />
             </div>
             <div className={s.textWrap}>
-              <p>Картка об'єкта</p>
-              <p>Тип робіт:</p>
+              <p>Картка об&#39;єкта</p>
+              <p>Тип робіт&#58;</p>
               <ol>
                 {currentProject.services.map((item, index) => {
                   return <li key={index}>{item}</li>;
                 })}
               </ol>
-              <p>Рік: {currentProject.year}</p>
-              <p>Вартість: 10000</p>
-              <p>Термін виконання робіт: {currentProject.period}</p>
-              <p>Географія роботи: Запоріжжя</p>
+              <p>Рік&#58; {currentProject.year}</p>
+              <p>Вартість&#58; 10000</p>
+              <p>Термін виконання робіт&#58; {currentProject.period}</p>
+              <p>Географія роботи&#58; Запоріжжя</p>
             </div>
             <ImageModal
               image={modalImg}

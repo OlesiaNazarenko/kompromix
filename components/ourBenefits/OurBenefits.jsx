@@ -45,7 +45,12 @@ function OurBenefits({ props }) {
           className={classNames(s.ourBenefitsSlider__constantBox, "container")}
         >
           <div className={s.ourBenefitsSlider__constantBox_img}>
-            <Image src={"/ourBenefits/mainIcon.svg"} width={80} height={80} />
+            <Image
+              src={"/ourBenefits/mainIcon.svg"}
+              width={80}
+              height={80}
+              alt=""
+            />
           </div>
           <h2>Професійний підхід</h2>
           <p>Переваги роботи з нами</p>

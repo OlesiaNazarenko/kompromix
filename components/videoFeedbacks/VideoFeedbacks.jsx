@@ -5,9 +5,8 @@ export default function VideoFeedbacks({ video }) {
     <div className={s.videoFeedbacksWrap}>
       {videos.map((item, index) => {
         return (
-          <div className={s.videoFeedback}>
+          <div className={s.videoFeedback} key={index}>
             <video
-              key={index}
               muted
               controls
               className={s.videoItem}
