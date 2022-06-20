@@ -1,18 +1,18 @@
 .header {
-  position: relative;
   width: 100%;
   font-family: var(--mainFont);
   margin: 0 auto;
   font-size: 14px;
+  background-color: var(--whiteColor);
 }
 .header__nav {
   width: 100%;
-  position: relative;
   display: flex;
+  /* justify-content: center; */
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
-  font-size: 18px;
+  font-size: 1.2em;
   font-weight: 300;
   background-image: linear-gradient(
     to bottom,
@@ -26,20 +26,21 @@
   font-size: 30px;
 }
 
-.nav_list__item {
+.nav_list__item,
+.activeLink {
   display: inline-block;
   margin: 0;
   padding: 15px;
-  position: relative;
 }
-
+.activeLink {
+  font-weight: 600;
+}
 .nav_list__item:hover .nav_list__link::after,
 .nav_list__item:active .nav_list__link::after {
   content: "";
   display: block;
   position: absolute;
   left: 5px;
-  width: 90%;
   height: 0.5px;
   background-color: var(--backgroundColor);
   opacity: 1;
@@ -59,15 +60,14 @@
 }
 
 .header__nav_list {
-  position: relative;
   width: 100%;
   display: flex;
   list-style: none;
-  margin-left: auto;
+  margin: auto;
   padding: 0;
   color: var(--backgroundColor);
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .header__nav .header__nav .header__nav .dropdown:after {
@@ -75,7 +75,6 @@
 }
 
 .nav_list__sublist {
-  position: relative;
   padding: 20px;
   font-size: 20px;
   text-align: left;
@@ -85,6 +84,7 @@
   -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  z-index: 11;
 }
 .header__nav .nav_list__item .nav_list__sublist .sublist__item {
   padding: 10px;
@@ -97,17 +97,19 @@
 .header__nav .nav_list__item .nav_list__sublist li:hover a {
   color: var(--perfectLightBlue);
 }
+
 .navSublist {
-  position: fixed;
-  width: 100%;
-  top: 190px;
+  position: absolute;
+  width: 100vw;
+  margin-top: 10px;
   left: 0;
   opacity: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--backgroundColor);
-  z-index: 5;
+  z-index: 11;
+  font-weight: 300;
   visibility: hidden;
   border-bottom: 1px solid var(--perfectLightBlue);
 }
@@ -121,6 +123,7 @@
   position: relative;
   width: 20px;
   top: 5px;
+  display: inline;
   margin-right: 5px;
 }
 .navSublist__desc {
@@ -130,7 +133,7 @@
   display: flex;
   margin: 20px 0;
 }
-.navSublist .navSublist__desc_icon {
+.navSublist .navSublist__desc_icon svg {
   font-size: 150px;
   position: relative;
   left: -20px;
@@ -208,12 +211,11 @@
     font-size: 20px;
     margin: 0;
   }
-
-  .navSublist .navSublist__desc_icon {
+  .header__nav_list {
+    width: 80%;
+  }
+  .navSublist .navSublist__desc_icon svg {
     top: 15px;
     font-size: 150px;
-  }
-  .navSublist {
-    top: 170px;
   }
 }

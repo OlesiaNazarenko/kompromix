@@ -1,6 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
-import BaseModal from "../modal/BaseModal";
+import BaseModal from "../baseModal/BaseModal";
 import s from "./BurgerMenu.module.css";
 export default function BurgerMenu(props) {
   return (

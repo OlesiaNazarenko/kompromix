@@ -1,59 +1,25 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useState, useEffect } from "react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-flip";
 import classNames from "classnames";
-import styles from "../servicesSlider/ServicesSlider.module.css";
 import s from "./FeedbackSection.module.css";
 import { EffectFlip, Autoplay, Navigation } from "swiper";
 import Link from "next/link";
-import Image from "next/image";
-import BeforeAfterSlider from "../beforeAfterSlider/BeforeAfterSlider";
-import PaidIcon from "@mui/icons-material/Paid";
 import RoofingIcon from "@mui/icons-material/Roofing";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import db from "../../db/db";
-import { collection, getDocs } from "firebase/firestore";
-export default function FeedbackSection() {
-  const [slide, setSlide] = useState([]);
-  const getData = async () => {
-    let slides = [];
-    const querySnapshot = await getDocs(collection(db, "textFeedbacks"));
-    querySnapshot.forEach((doc) => {
-      slides = doc.data().slides;
-    });
-    return setSlide(slides);
-  };
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+import SectionTitleComponent from "../sectionTitleComponent/SectionTitleComponent";
+import FeedbackItem from "./FeedbackItem";
 
-  useEffect(() => {
-    getData();
-  }, []);
+export default function FeedbackSection({ props }) {
   return (
     <>
-      <div
-        className={classNames(
-          s.feedbackSection__constantBox,
-          styles.services__descWrap
-        )}
-      >
-        <div className={s.feedbackSection__constantBox_img}>
-          <Image
-            className={s.icon}
-            alt=""
-            src={"/feedbacks/mainIcon.svg"}
-            layout="responsive"
-            width={"100%"}
-            height={"100%"}
-          />
-        </div>
-        <div className={styles.services__textWrap}>
-          <h1 className={styles.textWrap__title}>Відгуки</h1>
-          <p className={styles.textWrap__desc}>Об&#39;єкти до і після</p>
-        </div>
-      </div>
+      <SectionTitleComponent
+        title={"Відгуки"}
+        subTitle={"oб'єкти до і після"}
+        icon={<VolunteerActivismIcon />}
+      />
       <Swiper
         navigation={true}
         speed={1000}
@@ -63,73 +29,10 @@ export default function FeedbackSection() {
         modules={[Navigation, EffectFlip, Autoplay]}
         className={classNames(s.feedbackSection, "feedbackSection")}
       >
-        {slide.map((item, index) => {
+        {props.map((item, index) => {
           return (
             <SwiperSlide key={index} className={s.swiperSlider}>
-              <div className={s.beforeAfter}>
-                <BeforeAfterSlider
-                  className={s.beforeAfter_slider}
-                  {...item.images}
-                />
-              </div>
-              <div className={s.textFeedback}>
-                <h4>{item.userName}</h4>
-                <p>{item.textFeedback}</p>
-                <table className={s.feedbackSection_table}>
-                  <tbody>
-                    <tr className={s.tableRow}>
-                      <td>
-                        <RoofingIcon
-                          width={24}
-                          height={24}
-                          className={s.tableIcon}
-                        />
-                      </td>
-                      <td>{item.service}</td>
-                    </tr>
-                    <tr className={s.tableRow}>
-                      <td>
-                        <LocationOnIcon
-                          width={24}
-                          height={24}
-                          alt=""
-                          className={s.tableIcon}
-                        />
-                      </td>
-                      <td>{item.location}</td>
-                    </tr>
-                    <tr className={s.tableRow}>
-                      <td>
-                        <DesignServicesIcon
-                          width={24}
-                          height={24}
-                          className={s.tableIcon}
-                        />
-                      </td>
-                      <td>{item.square}m&#178;</td>
-                    </tr>
-                    <tr className={s.tableRow}>
-                      <td>
-                        <PaidIcon
-                          width={24}
-                          height={24}
-                          className={s.tableIcon}
-                        />
-                      </td>
-                      <td>{item.payment}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div className={s.userIcon}>
-                  <Image
-                    src={item.userIcon}
-                    alt=""
-                    width={50}
-                    height={50}
-                    layout="responsive"
-                  ></Image>
-                </div>
-              </div>
+              <FeedbackItem item={item} />
             </SwiperSlide>
           );
         })}

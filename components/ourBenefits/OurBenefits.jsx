@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,26 +7,12 @@ import "swiper/css/effect-fade";
 import s from "./OurBenefits.module.css";
 import { Pagination, EffectFade, Autoplay, Navigation } from "swiper";
 import Image from "next/image";
-import db from "../../db/db";
-import { collection, getDocs } from "firebase/firestore";
-export default function OurBenefits() {
-  const [slides, setSlides] = useState([]);
-  const getData = async () => {
-    let slide = [];
-    const querySnapshot = await getDocs(collection(db, "ourBenefits"));
-    querySnapshot.forEach((doc) => {
-      slide = doc.data().slides;
-    });
-    return setSlides(slide);
-  };
 
-  useEffect(() => {
-    getData();
-  }, []);
-  const textSlides = slides.filter((item) => {
+function OurBenefits({ props }) {
+  const textSlides = props.filter((item) => {
     return item.title;
   });
-  const imgSlides = slides.filter((item) => {
+  const imgSlides = props.filter((item) => {
     return item.img;
   });
 
@@ -89,13 +74,7 @@ export default function OurBenefits() {
                 className={classNames("container", s.ourBenefitsSlider__wrap)}
               >
                 <div className={s.ourBenefitsSlider__img}>
-                  <Image
-                    src={img}
-                    alt=""
-                    // dangerouslyAllowSVG={enable}
-                    width={300}
-                    height={300}
-                  />
+                  <Image src={img} alt="" width={300} height={300} />
                 </div>
                 <span className={s.ourBenefitsSlider__span1_2}>{span1}</span>
                 <span className={s.ourBenefitsSlider__span2_2}>{span2}</span>
@@ -107,3 +86,5 @@ export default function OurBenefits() {
     </>
   );
 }
+
+export default OurBenefits;

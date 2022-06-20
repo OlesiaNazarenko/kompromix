@@ -1,0 +1,27 @@
+.slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.aboutCompanySlider__wrap {
+  text-align: left;
+  backdrop-filter: brightness(50%);
+  padding: 20px 40px 40px 40px;
+  width: 100%;
+  height: 100%;
+  color: var(--whiteColor);
+}
+.aboutCompanySlider {
+  position: relative;
+  margin: 20px auto;
+}
+.aboutCompanySlider__title {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.aboutCompanySlider__text {
+  font-size: 1.3em;
+  display: block;
+  width: 60%;
+}

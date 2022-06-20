@@ -1,38 +1,52 @@
 .footer {
   position: relative;
   padding: 20px 0 40px 0;
-  background-color: var(--blueColor);
-  margin-top: 40px;
-  font-weight: 200;
+  font-weight: 400;
+  background-color: var(--whiteColor);
+}
+.footer::before {
+  content: "";
+  height: 20px;
+  width: 100%;
+  display: block;
+  background-image: linear-gradient(
+    to bottom,
+    var(--perfectLightBlue),
+    var(--blueColor)
+  );
 }
 .footerWrap {
   display: block;
+}
+.footerWrap .logo {
+  align-items: flex-start;
 }
 .logoDesc {
   width: 50%;
   padding: 5px;
   padding-left: 10px;
   border-left: 1px solid var(--perfectLightBlue);
-  color: var(--backgroundColor);
 }
 .linkBox {
   width: 100%;
   margin-top: 52px;
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 .linkBox__link {
-  display: block;
+  display: flex;
   margin-bottom: 10px;
-  margin-top: 10px;
-  color: var(--backgroundColor);
+  margin-top: 16px;
+  align-items: center;
 }
 .linkBox__link:hover {
-  color: var(--textColor);
+  color: var(--perfectLightBlue);
 }
 .linkBox__icon {
   position: relative;
-  top: 3px;
+
   right: 5px;
   font-size: 18px;
 }
@@ -41,7 +55,6 @@
   width: 100%;
   text-align: center;
   margin-top: 20px;
-  color: var(--backgroundColor);
 }
 .footer__nav_list:nth-of-type(2) {
   display: none;
@@ -50,7 +63,7 @@
   margin: 5px 0;
 }
 .nav_list__link:hover {
-  color: var(--textColor);
+  color: var(--perfectLightBlue);
 }
 .contactsSection_logo {
   width: 100%;
@@ -67,10 +80,12 @@
   .footerWrap {
     display: flex;
     font-size: 10px;
+    padding-top: 40px;
+    align-items: flex-start;
   }
   .footer__nav_list {
     width: 20%;
-    margin-top: 40px;
+    margin-top: 0;
     text-align: left;
   }
   .footer__nav_list:nth-of-type(2) {
@@ -83,11 +98,14 @@
   }
   .linkBox {
     width: 30%;
-    margin-top: 34px;
+    margin-top: 0;
     padding-left: 24px;
+    display: block;
     text-align: left;
   }
-
+  .linkBox a {
+    margin-top: 0;
+  }
   .linkBox__icon {
     font-size: 10px;
   }
@@ -96,12 +114,9 @@
   .footerWrap {
     font-size: 16px;
   }
-  .footer__nav_list {
-    margin-top: 70px;
-  }
+
   .linkBox {
     padding-left: 50px;
-    margin-top: 58px;
   }
   .linkBox__icon {
     font-size: 22px;

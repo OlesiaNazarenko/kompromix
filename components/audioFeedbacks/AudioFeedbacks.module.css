@@ -1,0 +1,38 @@
+.audioFeedbacksWrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  row-gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+}
+
+.audioFeedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media screen and (min-width: 600px) {
+  .audioFeedback {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .imageWrap {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .audioFeedbacksWrap {
+    justify-content: flex-start;
+    column-gap: 60px;
+  }
+}

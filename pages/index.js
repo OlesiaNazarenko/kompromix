@@ -3,8 +3,9 @@ import Head from "next/head";
 import HeroSection from "../components/heroSection/HeroSection";
 import Footer from "../components/footer/Footer";
 import HomePage from "../components/homePage/HomePage";
-
-export default function Index() {
+import db from "/db/db";
+import { collection, getDocs } from "firebase/firestore";
+export default function Index(props) {
   return (
     <>
       <Head>
@@ -23,12 +24,61 @@ export default function Index() {
         />
       </Head>
       <Header />
-
       <HeroSection />
       <main>
-        <HomePage />
+        <HomePage props={props} />
       </main>
       <Footer />
     </>
   );
+}
+export async function getServerSideProps() {
+  let servicesSlides = [];
+  const getServicesSlides = await getDocs(collection(db, "servicesSlider"));
+  getServicesSlides.forEach((doc) => {
+    servicesSlides = doc.data().slides;
+  });
+
+  let ourWorkersSlides = [];
+  const getourWorkersSlides = await getDocs(collection(db, "workers"));
+  getourWorkersSlides.forEach((doc) => {
+    ourWorkersSlides = Object.values(doc.data());
+  });
+
+  let ourBenefitsSlides = [];
+  const getourBenefitsSlides = await getDocs(collection(db, "ourBenefits"));
+  getourBenefitsSlides.forEach((doc) => {
+    ourBenefitsSlides = doc.data().slides;
+  });
+
+  let worksGallerySlides = [];
+  const getWorksGallerySlides = await getDocs(
+    collection(db, "worksGalleryImages")
+  );
+  getWorksGallerySlides.forEach((doc) => {
+    worksGallerySlides = doc.data().image;
+  });
+
+  let feedbacksSlides = [];
+  const getFeedbacksSlides = await getDocs(collection(db, "textFeedbacks"));
+  getFeedbacksSlides.forEach((doc) => {
+    feedbacksSlides = doc.data().slides;
+  });
+
+  let markersData = [];
+  const getMarkersData = await getDocs(collection(db, "mapMarks"));
+  getMarkersData.forEach((doc) => {
+    markersData = doc.data().marks;
+  });
+
+  return {
+    props: {
+      ourBenefitsSlides,
+      ourWorkersSlides,
+      servicesSlides,
+      worksGallerySlides,
+      feedbacksSlides,
+      markersData,
+    },
+  };
 }

@@ -13,6 +13,7 @@ const style = {
   width: 400,
   bgcolor: "background.paper",
   boxShadow: 24,
+  borderRadius: "10px",
   p: 4,
   textAlign: "center",
 };
@@ -53,7 +54,6 @@ export default function BaseModal({ buttonName }) {
             id="standard-basic"
             autoComplete="off"
             label="Ім'я"
-            variant="standard"
           />
           <TextField
             className={s.textfield}
@@ -62,14 +62,12 @@ export default function BaseModal({ buttonName }) {
             autoComplete="off"
             inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
             label="Телефон"
-            variant="standard"
           />
           <TextField
             className={s.textfield}
             color="primary"
             id="standard-basic"
             label="Електронна адреса"
-            variant="standard"
             autoComplete="off"
           />
 

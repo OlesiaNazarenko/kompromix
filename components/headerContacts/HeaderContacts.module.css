@@ -11,7 +11,7 @@
 }
 .header__nav_logo {
   display: block;
-  width: 140px;
+  width: auto;
   padding: 5px;
 }
 .header__nav_logo:hover {
@@ -41,19 +41,29 @@
   margin-top: 5px;
   margin-left: 80px;
 }
+.contactsSection_contacts p {
+  margin: 10px 0 0 0;
+}
 .callIcon,
-.emailIcon {
+.emailIcon,
+.instaIcon {
   position: relative;
   width: 20px;
   top: 7px;
   margin-right: 10px;
 }
-.contactsSection_contacts__link:hover {
+.contactsSection_contacts__link:hover a,
+.contactsSection_contacts__link:active,
+.contactsSection_contacts__link:focus {
   color: var(--perfectLightBlue);
 }
+
 @media screen and (min-width: 768px) {
   .header__contactsSection {
     display: flex;
+  }
+  .header__nav_logo {
+    width: 180px;
   }
 }
 @media screen and (min-width: 1000px) {

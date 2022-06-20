@@ -31,8 +31,8 @@
     0px 2px 2px rgba(81, 41, 10, 0.2);
 }
 .textfield {
-  margin-bottom: 20px;
-  width: 80%;
+  margin: 10px auto !important;
+  width: 90%;
   font-family: var(--mainFont);
   border-color: var(--brightBlueColor);
 }

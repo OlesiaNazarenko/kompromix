@@ -1,0 +1,42 @@
+.backDrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalImg {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  border: transparent;
+  outline: transparent;
+}
+.closeIcon {
+  position: fixed;
+  font-size: 40px;
+  padding: 5px;
+  right: 20px;
+  top: 20px;
+  color: var(--backgroundColor);
+  cursor: pointer;
+}
+.closeIcon:hover,
+.closeIcon:active {
+  color: var(--perfectLightBlue);
+}
+
+@media screen and (min-width: 450px) {
+  .modalImg {
+    width: 80%;
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modalImg {
+    width: 80%;
+    height: 80vh;
+  }
+}

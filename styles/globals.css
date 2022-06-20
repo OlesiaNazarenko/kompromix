@@ -8,6 +8,7 @@
   --brightBlueColor: #3b8beb;
   --perfectLightBlue: #86b3d1;
   --backgroundColor: #f7f9fb;
+  --whiteColor: #fff;
   --blueColor: #5085a5;
   --greenColor: #687864;
   --textColor: #222831;
@@ -42,12 +43,31 @@ ul {
 * {
   box-sizing: border-box;
 }
+.MuiRating-iconFilled {
+  color: var(--perfectLightBlue);
+}
+.projectsGallery .swiper-button-next,
+.projectsGallery .swiper-button-prev {
+  width: 80px !important;
+  height: 80px !important;
+  background-color: var(--textColor) !important;
+  color: var(--backgroundColor);
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.projectsGallery .swiper-button-next {
+  margin-left: 30px;
+  right: 0;
+}
 .services .swiper-button-prev,
 .services .swiper-button-next,
 .worksGallery .swiper-button-next,
 .worksGallery .swiper-button-prev,
 .feedbackSection .swiper-button-next,
-.feedbackSection .swiper-button-prev {
+.feedbackSection .swiper-button-prev,
+.aboutCompanySliderWrap .swiper-button-next,
+.aboutCompanySliderWrap .swiper-button-prev {
   display: none !important;
   position: absolute;
   width: 80px !important;
@@ -62,6 +82,10 @@ ul {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.aboutCompanySliderWrap .swiper-button-next,
+.aboutCompanySliderWrap .swiper-button-prev {
+  top: 20px !important;
+}
 .feedbackSection .swiper-button-next,
 .feedbackSection .swiper-button-prev {
   display: flex !important;
@@ -74,13 +98,16 @@ ul {
 .feedbackSection .swiper-button-prev::after {
   font-size: 20px;
 }
+
 .feedbackSection .swiper-button-prev {
   left: 30px !important;
 }
+
 .feedbackSection .swiper-button-next {
   right: 30px !important;
 }
 .services .swiper-button-next,
+.aboutCompanySliderWrap .swiper-button-next,
 .worksGallery .swiper-button-next {
   right: 10px !important;
 }
@@ -102,7 +129,15 @@ ul {
 .feedbackSection .swiper-button-next:hover,
 .feedbackSection .swiper-button-next:active,
 .feedbackSection .swiper-button-prev:hover,
-.feedbackSection .swiper-button-prev:active {
+.feedbackSection .swiper-button-prev:active,
+.aboutCompanySliderWrap .swiper-button-next:active,
+.aboutCompanySliderWrap .swiper-button-next:hover,
+.aboutCompanySliderWrap .swiper-button-prev:active,
+.aboutCompanySliderWrap .swiper-button-prev:hover,
+.projectsGallery .swiper-button-next:hover,
+.projectsGallery .swiper-button-next:active,
+.projectsGallery .swiper-button-prev:hover,
+.projectsGallery .swiper-button-prev:active {
   color: var(--blueColor) !important;
 }
 .services .swiper-wrapper {
@@ -110,11 +145,14 @@ ul {
   margin-top: 130px;
 }
 .services .swiper-pagination-bullet-active-main,
-.worksGallery .swiper-pagination-bullet-active-main {
+.worksGallery .swiper-pagination-bullet-active-main,
+.aboutCompanySliderWrap .swiper-pagination-bullet-active-main {
   background-color: var(--lightBlueColor) !important;
 }
 .services .swiper-pagination-bullet,
-.worksGallery .swiper-pagination-bullet {
+.worksGallery .swiper-pagination-bullet,
+.aboutCompanySliderWrap .swiper-pagination-bullet,
+.ourWorkers .swiper-pagination-bullet {
   border-radius: 0;
 }
 .baseModalWrap .buttonGetTheCall {
@@ -159,6 +197,16 @@ input:focus {
   position: relative;
   padding: 0 10px 0 10px;
 }
+.aboutCompanySliderWrap {
+  display: none;
+}
+.projectsGallery .disabledLink {
+  pointer-events: none;
+  filter: brightness(20%);
+}
+.tabs .descWrap {
+  font-family: var(--mainFont);
+}
 @media screen and (min-width: 350px) {
   .container {
     padding: 0;
@@ -166,7 +214,7 @@ input:focus {
 }
 @media screen and (min-width: 450px) {
   .container {
-    width: 70%;
+    width: 80%;
   }
 }
 @media screen and (min-width: 600px) {
@@ -178,7 +226,13 @@ input:focus {
   .container {
     width: 700px;
   }
-
+  .aboutCompanySliderWrap {
+    display: block;
+  }
+  .projectsGallery .swiper-button-next,
+  .projectsGallery .swiper-button-prev {
+    display: flex;
+  }
   .feedbackSection .swiper-button-next,
   .feedbackSection .swiper-button-prev {
     position: absolute;
@@ -212,8 +266,13 @@ input:focus {
   .worksGallery .swiper-button-next,
   .worksGallery .swiper-button-prev,
   .feedbackSection .swiper-button-next,
-  .feedbackSection .swiper-button-prev {
+  .feedbackSection .swiper-button-prev,
+  .aboutCompanySliderWrap .swiper-button-next,
+  .aboutCompanySliderWrap .swiper-button-prev {
     display: flex !important;
+  }
+  .beforeAfterPageSection .beforeAfterFeedback {
+    top: 50px;
   }
 }
 /* MOBILE MENU*/
@@ -300,6 +359,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .ourBenefits .swiper-slide {
   color: var(--backgroundColor);
 }
+
 .ourBenefits .swiper-button-prev,
 .ourBenefits .swiper-button-next {
   position: absolute;
@@ -324,7 +384,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .ourBenefits .swiper-button-next {
   right: 100px !important;
 }
-.ourBenefits .swiper-pagination-bullet {
+.ourBenefits .swiper-pagination-bullet,
+.aboutCompanySliderWrap .swiper-pagination-bullet,
+.ourWorkers .swiper-pagination-bullet {
   height: 30px;
   width: 30px;
   font-size: 22px;
