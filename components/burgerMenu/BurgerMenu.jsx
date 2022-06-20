@@ -17,8 +17,8 @@ export default function BurgerMenu(props) {
         <a className="menu-item">Проекти</a>
       </Link>
 
-      <Link href="/shop">
-        <a className="menu-item">Магазин</a>
+      <Link href="/feedbacks">
+        <a className="menu-item">Відгуки</a>
       </Link>
       <Link href="/contacts">
         <a className="menu-item">Контакти</a>

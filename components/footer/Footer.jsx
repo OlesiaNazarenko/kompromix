@@ -50,8 +50,8 @@ export default function Footer() {
             </Link>
           </li>
           <li className={s.nav_list__item}>
-            <Link href={"/shop"}>
-              <a className={s.nav_list__link}>Магазин</a>
+            <Link href={"/feedbacks"}>
+              <a className={s.nav_list__link}>Відгуки</a>
             </Link>
           </li>
           <li className={s.nav_list__item}>
